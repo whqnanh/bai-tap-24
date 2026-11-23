@@ -3,47 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đèn Kéo Quân 3D Javascript | MSSV: 241A010633 - Nguyễn Hoàng Anh</title>
-  <meta name="description" content="Hiệu ứng JavaScript 3D Đèn Kéo Quân xoay vòng tròn 6 mặt ảnh chụp. Tự động dừng khi rê chuột và quay tiếp khi rời chuột.">
+  <title>Đèn Kéo Quân 3D - MSSV: 241A010633 - Nguyễn Hoàng Anh</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/den-keo-quan.css">
   <style>
     .page-header-box {
       text-align: center;
-      padding: 30px 20px 20px;
+      padding: 25px 20px 15px;
     }
     .demo-instructions {
       max-width: 800px;
-      margin: 25px auto 40px;
-      background: rgba(17, 24, 39, 0.7);
+      margin: 25px auto 35px;
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 24px;
-      backdrop-filter: blur(10px);
+      padding: 20px;
     }
     .instruction-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+      gap: 14px;
+      margin-top: 14px;
       text-align: left;
     }
     .step-item {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      padding: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 12px;
     }
     .step-item h4 {
-      color: var(--accent);
-      font-size: 14px;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #38bdf8;
+      font-size: 13.5px;
+      margin-bottom: 4px;
     }
     .step-item p {
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--text-muted);
       line-height: 1.5;
     }
@@ -52,9 +47,9 @@
       align-items: center;
       gap: 6px;
       color: #60a5fa;
-      font-size: 14px;
-      margin-bottom: 15px;
-      font-weight: 600;
+      font-size: 13.5px;
+      margin-bottom: 12px;
+      font-weight: 500;
     }
     .back-nav-btn:hover {
       text-decoration: underline;
@@ -63,33 +58,30 @@
 </head>
 <body>
 
-  <!-- TOP BAR: THÔNG TIN SINH VIÊN -->
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="student-tag">
-        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span>Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
         <span class="mssv-badge">MSSV: 241A010633</span>
-        <span>• Trường Đại học Văn Hiến (VHU)</span>
+        <span>Lập trình Web - Đại học Văn Hiến</span>
       </div>
       <div class="quick-links">
-        <a href="index.html">🏠 Trang chủ Bài tập 24</a>
-        <a href="https://github.com/whqnanh/bai-tap-24" target="_blank" rel="noopener">🐙 GitHub Repo</a>
+        <a href="index.html">Trang chủ</a>
+        <a href="https://github.com/whqnanh/bai-tap-24" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <div class="logo-icon">🏮</div>
         <div class="brand-text">
           <h1>Đèn Kéo Quân 3D</h1>
-          <span>Hiệu ứng JavaScript Lập trình Web</span>
+          <span>Nguyễn Hoàng Anh - 241A010633</span>
         </div>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
 
       <ul class="nav-menu" id="navMenu">
         <li class="nav-item"><a href="index.html">Trang chủ</a></li>
@@ -99,152 +91,106 @@
         <li class="nav-item"><a href="bai20.html">Bài 20</a></li>
         <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
         <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
-        <li class="nav-item highlight"><a href="den-keo-quan.html" class="active">🏮 Đèn Kéo Quân</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html" class="active">Đèn Kéo Quân</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
-  <main class="container" style="padding-top: 25px; padding-bottom: 60px;">
+  <main class="container" style="padding-top: 20px; padding-bottom: 50px;">
     
-    <a href="index.html" class="back-nav-btn">← Quay lại Trang Chủ Tổng Hợp Bài Tập 24</a>
+    <a href="index.html" class="back-nav-btn">&larr; Quay lại Trang chủ</a>
 
     <div class="page-header-box">
-      <div class="hero-badge">Hiệu Ứng Đồ Họa 3D CSS &amp; JavaScript Hoàn Chỉnh</div>
-      <h2 class="hero-title" style="font-size: 34px;">Đèn Kéo Quân Xoay Vòng Tròn 6 Mặt Ảnh</h2>
+      <div class="hero-badge">Hiệu ứng JavaScript 3D</div>
+      <h2 class="hero-title" style="font-size: 28px;">Đèn Kéo Quân 6 Mặt Ảnh</h2>
       <p class="hero-subtitle">
-        Hiển thị 6 hình ảnh cá nhân sinh viên Nguyễn Hoàng Anh trên 6 mặt lục giác của đèn kéo quân. Đèn tự động xoay quanh trục Y, <strong>dừng lại ngay lập tức khi rê chuột vào hình</strong> và <strong>tiếp tục quay khi rê chuột ra</strong>.
+        Hiển thị 6 hình ảnh trên 6 mặt đèn kéo quân xoay vòng tròn. Đưa chuột vào 1 hình thì đèn dừng lại, rê chuột ra thì đèn quay tiếp.
       </p>
     </div>
 
-    <!-- KHUNG HIỆU ỨNG 3D ĐÈN KÉO QUÂN -->
     <div class="lantern-scene">
-      <!-- Trạng thái hoạt động -->
       <div class="lantern-status-badge">
         <span class="status-pulse-dot" id="statusDot"></span>
-        <span id="lanternStatusText">ĐANG QUAY (Tự động)</span>
-        <span style="opacity: 0.5;">|</span>
-        <span>Góc xoay: <strong id="angleDisplay" style="color: #fbbf24;">0°</strong></span>
+        <span id="lanternStatusText">Đang quay</span>
+        <span style="opacity: 0.4;">|</span>
+        <span>Góc xoay: <strong id="angleDisplay" style="color: #38bdf8;">0°</strong></span>
       </div>
 
-      <!-- Hướng dẫn tương tác nhanh -->
       <div class="lantern-hint">
-        💡 Rê chuột vào ảnh để <strong>Dừng</strong> • Nhấp để <strong>Phóng to</strong>
+        Rê chuột vào hình để dừng - Rê chuột ra để quay tiếp
       </div>
 
-      <!-- Dây treo và khuyên vàng -->
-      <div class="lantern-hanger"></div>
-      <div class="lantern-ring"></div>
-
-      <!-- Mái đỉnh lồng đèn (Lantern Roof) -->
-      <div class="lantern-roof"></div>
-
-      <!-- Sân khấu 3D lồng đèn (Stage) -->
       <div class="lantern-stage">
-        <!-- Tim đèn phát sáng lung linh bên trong -->
-        <div class="lantern-core-light" id="coreLight"></div>
-
-        <!-- Trục xoay 6 mặt đèn -->
         <div class="lantern-carousel" id="lanternCarousel">
           
-          <!-- MẶT 1 -->
           <div class="lantern-face" data-index="1">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo1.jpg" alt="Ảnh 1 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo1.jpg" alt="Ảnh 1" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 01 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #1</span>
+                <span class="face-num">Mặt 01</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 1</span>
               </div>
             </div>
           </div>
 
-          <!-- MẶT 2 -->
           <div class="lantern-face" data-index="2">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo2.jpg" alt="Ảnh 2 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo2.jpg" alt="Ảnh 2" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 02 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #2</span>
+                <span class="face-num">Mặt 02</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 2</span>
               </div>
             </div>
           </div>
 
-          <!-- MẶT 3 -->
           <div class="lantern-face" data-index="3">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo3.jpg" alt="Ảnh 3 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo3.jpg" alt="Ảnh 3" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 03 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #3</span>
+                <span class="face-num">Mặt 03</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 3</span>
               </div>
             </div>
           </div>
 
-          <!-- MẶT 4 -->
           <div class="lantern-face" data-index="4">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo4.jpg" alt="Ảnh 4 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo4.jpg" alt="Ảnh 4" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 04 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #4</span>
+                <span class="face-num">Mặt 04</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 4</span>
               </div>
             </div>
           </div>
 
-          <!-- MẶT 5 -->
           <div class="lantern-face" data-index="5">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo5.jpg" alt="Ảnh 5 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo5.jpg" alt="Ảnh 5" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 05 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #5</span>
+                <span class="face-num">Mặt 05</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 5</span>
               </div>
             </div>
           </div>
 
-          <!-- MẶT 6 -->
           <div class="lantern-face" data-index="6">
-            <span class="face-corner corner-tl"></span>
-            <span class="face-corner corner-tr"></span>
-            <span class="face-corner corner-bl"></span>
-            <span class="face-corner corner-br"></span>
             <div class="face-inner">
               <div class="face-image-wrap">
-                <img src="images/photo6.jpg" alt="Ảnh 6 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                <img src="images/photo6.jpg" alt="Ảnh 6" class="face-image">
               </div>
               <div class="face-overlay">
-                <span class="face-num">MẶT 06 / 06</span>
-                <span class="face-title">Nguyễn Hoàng Anh #6</span>
+                <span class="face-num">Mặt 06</span>
+                <span class="face-title">Nguyễn Hoàng Anh - 6</span>
               </div>
             </div>
           </div>
@@ -252,84 +198,46 @@
         </div>
       </div>
 
-      <!-- Chân đế lồng đèn (Lantern Base) -->
-      <div class="lantern-base"></div>
-
-      <!-- Tua rua đỏ trang trí (Tassels) -->
-      <div class="lantern-tassels">
-        <div class="tassel-item"></div>
-        <div class="tassel-item"></div>
-        <div class="tassel-item"></div>
-        <div class="tassel-item"></div>
-      </div>
-
-      <!-- BẢNG ĐIỀU KHIỂN NÂNG CAO (CONTROLS) -->
       <div class="lantern-controls">
-        <button class="control-btn" id="btnTogglePlay">
-          <span class="icon">⏸</span> Tạm dừng
-        </button>
-
-        <button class="control-btn" id="btnToggleDir">
-          <span class="icon">🔄</span> Đổi chiều xoay
-        </button>
-
+        <button class="control-btn" id="btnTogglePlay">Tạm dừng</button>
+        <button class="control-btn" id="btnToggleDir">Đổi chiều quay</button>
         <div class="speed-control">
           <span>Tốc độ:</span>
           <input type="range" id="speedSlider" min="0.2" max="3.0" step="0.2" value="1.0">
-          <span id="speedVal" style="color: #fbbf24; font-weight: bold;">1.0x</span>
+          <span id="speedVal" style="color: #38bdf8; font-weight: 600;">1.0x</span>
         </div>
-
-        <button class="control-btn" id="btnToggleLight">
-          <span class="icon">🕯️</span> Tắt đèn
-        </button>
       </div>
     </div>
 
-    <!-- KHỐI GIẢI THÍCH KỸ THUẬT & HƯỚNG DẪN KIỂM TRA -->
     <div class="demo-instructions">
-      <h3 style="color: #fff; font-size: 18px; display: flex; align-items: center; gap: 8px;">
-        ⚙️ Cơ Chế Hoạt Động &amp; Đáp Ứng Đầy Đủ Yêu Cầu Đề Bài
-      </h3>
+      <h3 style="color: #fff; font-size: 16px; margin-bottom: 6px;">Yêu cầu kỹ thuật thực hiện</h3>
       <div class="instruction-steps">
         <div class="step-item">
-          <h4>🎯 1. 6 Mặt Đèn Kéo Quân</h4>
-          <p>
-            Hình học không gian 3D được tạo bởi 6 mặt hình lục giác đều, góc quay mỗi mặt cách nhau chính xác <strong>60°</strong> với bán kính lùi Z = <strong>230px</strong>.
-          </p>
+          <h4>1. 6 Mặt Đèn</h4>
+          <p>Bố trí 6 mặt hình ảnh theo hình lăng trụ lục giác đều, góc quay mỗi mặt 60°.</p>
         </div>
         <div class="step-item">
-          <h4>⏸️ 2. Đưa Chuột Vào Thì Dừng</h4>
-          <p>
-            Bắt sự kiện <code>mouseenter</code> trên từng thẻ <code>.lantern-face</code>. Đèn lập tức giữ nguyên góc xoay hiện tại và viền vàng phát quang nổi bật để xem rõ ảnh.
-          </p>
+          <h4>2. Rê chuột vào thì dừng lại</h4>
+          <p>Bắt sự kiện mouseenter trên các thẻ mặt đèn, giữ nguyên góc xoay hiện tại.</p>
         </div>
         <div class="step-item">
-          <h4>▶️ 3. Rê Chuột Ra Thì Quay Tiếp</h4>
-          <p>
-            Bắt sự kiện <code>mouseleave</code>, biến trạng thái <code>isHovered = false</code> cho phép vòng lặp <code>requestAnimationFrame</code> tiếp tục tăng biến góc xoay mượt mà 60fps.
-          </p>
-        </div>
-        <div class="step-item">
-          <h4>🖐️ 4. Tương Tác Kéo Chuột &amp; Lightbox</h4>
-          <p>
-            Người dùng có thể giữ chuột kéo sang trái/phải để tự do khám phá các góc độ 3D, hoặc nhấp đúp vào ảnh để phóng to toàn màn hình.
-          </p>
+          <h4>3. Rê chuột ra thì quay tiếp</h4>
+          <p>Bắt sự kiện mouseleave, vòng lặp requestAnimationFrame tiếp tục tăng góc xoay.</p>
         </div>
       </div>
     </div>
 
   </main>
 
-  <!-- LIGHTBOX MODAL -->
   <div class="lightbox-modal" id="lightboxModal">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightboxClose" aria-label="Đóng">&times;</button>
       <div class="lightbox-image-wrap">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Chi tiết hình ảnh" id="lightboxImage" class="lightbox-image">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Ảnh chi tiết" id="lightboxImage" class="lightbox-image">
       </div>
       <div class="lightbox-caption">
         <div>
-          <h4 id="lightboxTitle" style="color: #fbbf24; font-size: 16px; margin-bottom: 4px;">Tiêu đề ảnh</h4>
+          <h4 id="lightboxTitle" style="color: #fff; font-size: 15px; margin-bottom: 2px;">Tiêu đề ảnh</h4>
           <p id="lightboxDesc" style="color: #94a3b8; font-size: 13px;">Mô tả ảnh</p>
         </div>
         <span class="mssv-badge">MSSV: 241A010633</span>
@@ -337,40 +245,14 @@
     </div>
   </div>
 
-  <!-- PROFILE SUMMARY FOOTER -->
-  <footer class="author-section" style="padding: 40px 0 20px;">
+  <footer>
     <div class="container">
-      <div class="profile-card">
-        <img src="images/avatar.jpg" alt="Ảnh đại diện Nguyễn Hoàng Anh" class="profile-avatar">
-        <div class="profile-info">
-          <div class="profile-name">
-            Nguyễn Hoàng Anh
-            <span class="mssv-badge">MSSV: 241A010633</span>
-          </div>
-          <p style="color: #94a3b8; font-size: 14px;">
-            Sinh viên ngành Công nghệ Thông tin - Trường Đại học Văn Hiến (VHU). Bài tập 24: Thiết kế hiệu ứng JavaScript Đèn kéo quân 3D và Trang chủ tổng hợp kết quả bài tập 17 đến 22.
-          </p>
-          <div class="profile-details">
-            <div>Môn học: <strong>Lập trình Web</strong></div>
-            <div>GitHub: <a href="https://github.com/whqnanh" target="_blank" rel="noopener" style="color: #60a5fa;">github.com/whqnanh</a></div>
-            <div>Dự án: <strong>Đèn Kéo Quân 3D</strong></div>
-            <div>Trạng thái: <span style="color: #4ade80; font-weight: bold;">Hoàn thành 100%</span></div>
-          </div>
-        </div>
-      </div>
+      <p>Nguyễn Hoàng Anh - MSSV: 241A010633 - Đại học Văn Hiến</p>
     </div>
   </footer>
 
-  <footer style="padding: 20px 0; font-size: 13px;">
-    <div class="container">
-      <p>© 2026 Nguyễn Hoàng Anh - MSSV: 241A010633 • Đại học Văn Hiến. Đã triển khai trên GitHub Pages.</p>
-    </div>
-  </footer>
-
-  <!-- SCRIPT -->
   <script src="js/den-keo-quan.js"></script>
   <script>
-    // Responsive Navbar Toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     if (navToggle && navMenu) {

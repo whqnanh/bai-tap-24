@@ -3,86 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài tập 17: Đăng ký Domain & Kiểm tra DNS | MSSV: 241A010633</title>
+  <title>Bài tập 17: Domain & DNS - MSSV: 241A010633</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .detail-container { max-width: 900px; margin: 40px auto 70px; }
+    .detail-container { max-width: 860px; margin: 30px auto 60px; }
     .report-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 35px;
-      margin-bottom: 30px;
+      padding: 30px;
+      margin-bottom: 25px;
     }
     .back-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       color: #60a5fa;
-      font-weight: 600;
-      margin-bottom: 25px;
-      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 13.5px;
     }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
-      margin: 25px 0;
-      border: 1px solid #334155;
+      margin: 20px 0;
+      border: 1px solid var(--border-color);
     }
     .media-box img { width: 100%; display: block; }
     .table-custom {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 14px;
+      margin: 16px 0;
+      font-size: 13.5px;
     }
     .table-custom th, .table-custom td {
       border: 1px solid var(--border-color);
-      padding: 12px 16px;
+      padding: 10px 14px;
       text-align: left;
     }
     .table-custom th {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       color: #f8fafc;
     }
     .code-snippet {
       background: #090d16;
-      border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 16px;
-      font-family: 'Fira Code', monospace;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 14px;
+      font-family: monospace;
       font-size: 13px;
       color: #38bdf8;
       overflow-x: auto;
-      margin: 15px 0;
+      margin: 14px 0;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="container top-bar-content">
       <div class="student-tag">
-        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span>Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
         <span class="mssv-badge">MSSV: 241A010633</span>
-        <span>• Lập trình Web - VHU</span>
+        <span>Lập trình Web - Đại học Văn Hiến</span>
       </div>
       <div class="quick-links">
-        <a href="index.html">🏠 Về Trang Chủ</a>
-        <a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a>
+        <a href="index.html">Trang chủ</a>
+        <a href="den-keo-quan.html">Đèn Kéo Quân</a>
       </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <div class="logo-icon">🌐</div>
         <div class="brand-text">
           <h1>Bài Tập 17</h1>
-          <span>Domain Name &amp; DNS Resolution</span>
+          <span>Nguyễn Hoàng Anh - 241A010633</span>
         </div>
       </a>
       <ul class="nav-menu">
@@ -93,65 +91,63 @@
         <li class="nav-item"><a href="bai20.html">Bài 20</a></li>
         <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
         <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
-        <li class="nav-item highlight"><a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html">Đèn Kéo Quân</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="container detail-container">
-    <a href="index.html" class="back-link">← Quay lại trang chủ Bài tập 24</a>
+    <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
-        <span class="tag" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: bold; padding: 6px 14px; font-size: 13px;">BÁO CÁO THỰC HÀNH BÀI 17</span>
-        <span class="status-indicator"><span class="status-dot"></span> ĐÃ XÁC MINH DNS THÀNH CÔNG (200 OK)</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 17</span>
+        <span class="status-indicator"><span class="status-dot"></span> Đã xác minh DNS (200 OK)</span>
       </div>
 
-      <h1 style="font-size: 28px; margin-bottom: 12px; color: #fff;">Đăng Ký Domain Name &amp; Kiểm Tra Bản Ghi Phân Giải DNS</h1>
-      <p style="color: var(--text-muted); font-size: 15px;">
-        Thực hành đăng ký tên miền động miễn phí qua DuckDNS, cấu hình bản ghi địa chỉ (Record A) trỏ về địa chỉ IP máy chủ và kiểm thử phân giải DNS bằng tiện ích <code>nslookup</code> trên Terminal macOS.
+      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Đăng Ký Domain &amp; Kiểm Tra Bản Ghi DNS</h1>
+      <p style="color: var(--text-muted); font-size: 14px;">
+        Đăng ký tên miền DuckDNS, cấu hình bản ghi Record A trỏ về IP máy chủ và kiểm thử phân giải DNS bằng lệnh nslookup trên macOS.
       </p>
 
-      <!-- HÌNH KẾT QUẢ -->
       <div class="media-box">
         <img src="images/bt17.svg" alt="Hình kết quả Bài tập 17 DNS">
       </div>
 
-      <h3 style="color: #fff; margin: 25px 0 10px;">1. Thông Số Kỹ Thuật Đã Thiết Lập</h3>
+      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">1. Thông số kỹ thuật đã thiết lập</h3>
       <table class="table-custom">
         <thead>
           <tr>
-            <th>Thông số cấu hình</th>
+            <th>Thông số</th>
             <th>Giá trị thực tế</th>
-            <th>Ý nghĩa kỹ thuật</th>
+            <th>Ý nghĩa</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Tên miền đã cấp (Domain)</strong></td>
-            <td><code style="color: #38bdf8;">mywebsite-hoanganh.duckdns.org</code></td>
-            <td>Subdomain toàn cầu được kích hoạt trên hệ thống DNS toàn cầu</td>
+            <td><code>mywebsite-hoanganh.duckdns.org</code></td>
+            <td>Subdomain hoạt động trên máy chủ DNS toàn cầu</td>
           </tr>
           <tr>
             <td><strong>Loại bản ghi DNS</strong></td>
-            <td>Record A (Address Mapping)</td>
-            <td>Ánh xạ trực tiếp từ tên miền sang địa chỉ IPv4</td>
+            <td>Record A (Address)</td>
+            <td>Ánh xạ tên miền sang địa chỉ IPv4</td>
           </tr>
           <tr>
-            <td><strong>Địa chỉ IP đích trỏ đến</strong></td>
-            <td><code style="color: #4ade80;">113.185.75.163</code></td>
-            <td>Địa chỉ IP công cộng của máy chủ web</td>
+            <td><strong>IP đích trỏ đến</strong></td>
+            <td><code>113.185.75.163</code></td>
+            <td>Địa chỉ IP công cộng của web server</td>
           </tr>
           <tr>
             <td><strong>DNS Server kiểm tra</strong></td>
-            <td>Google Public DNS (<code>8.8.8.8#53</code>)</td>
-            <td>Máy chủ DNS chuẩn cổng 53 của Google để xác thực toàn cầu</td>
+            <td>Google Public DNS (8.8.8.8)</td>
+            <td>Máy chủ DNS chuẩn cổng 53 để kiểm thử toàn cầu</td>
           </tr>
         </tbody>
       </table>
 
-      <h3 style="color: #fff; margin: 25px 0 10px;">2. Lệnh Kiểm Tra Bằng Terminal macOS</h3>
-      <p style="color: var(--text-muted); font-size: 14px;">Thực thi lệnh kiểm tra phân giải DNS trực tiếp:</p>
+      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">2. Lệnh kiểm tra phân giải DNS</h3>
       <div class="code-snippet">
 $ nslookup mywebsite-hoanganh.duckdns.org 8.8.8.8<br><br>
 Server:        8.8.8.8<br>
@@ -161,17 +157,12 @@ Name:    mywebsite-hoanganh.duckdns.org<br>
 Address: 113.185.75.163
       </div>
 
-      <h3 style="color: #fff; margin: 25px 0 10px;">3. Kết Luận</h3>
-      <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">
-        Hệ thống phân giải tên miền hoạt động ổn định và chính xác. Mọi truy vấn từ trình duyệt tới <code>mywebsite-hoanganh.duckdns.org</code> đều được định tuyến tức thì đến IP đích <code>113.185.75.163</code>.
-      </p>
-
-      <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" class="btn btn-primary">
-          🌐 Truy cập Tên miền Thử nghiệm
+          Mở tên miền thử nghiệm
         </a>
         <a href="bai18.html" class="btn btn-secondary">
-          Tiếp tục sang Bài 18: Upload FTP →
+          Sang Bài 18: Upload FTP &rarr;
         </a>
       </div>
     </div>
@@ -179,7 +170,7 @@ Address: 113.185.75.163
 
   <footer>
     <div class="container">
-      <p>© 2026 Nguyễn Hoàng Anh - MSSV: 241A010633 • Đại học Văn Hiến</p>
+      <p>Nguyễn Hoàng Anh - MSSV: 241A010633 - Đại học Văn Hiến</p>
     </div>
   </footer>
 </body>

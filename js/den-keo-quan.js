@@ -1,71 +1,50 @@
-/**
- * ENGINE ĐIỀU KHIỂN ĐÈN KÉO QUÂN 3D JAVASCRIPT
- * Học phần: Lập trình Web - ĐH Văn Hiến (VHU)
- * Sinh viên: Nguyễn Hoàng Anh | MSSV: 241A010633
- *
- * Yêu cầu cốt lõi:
- * 1. Hiển thị 6 hình ảnh trên 6 mặt đèn kéo quân trong không gian 3D.
- * 2. Đèn quay vòng tròn tự động.
- * 3. Đưa chuột vào 1 hình nào đó thì đèn DỪNG LẠI.
- * 4. Rê chuột ra thì đèn QUAY TIẾP.
- */
-
 (function () {
   'use strict';
 
-  // Khởi tạo các phần tử DOM
   const carousel = document.getElementById('lanternCarousel');
   const statusBadge = document.getElementById('lanternStatusText');
   const statusDot = document.getElementById('statusDot');
   const angleDisplay = document.getElementById('angleDisplay');
   const btnTogglePlay = document.getElementById('btnTogglePlay');
   const btnToggleDir = document.getElementById('btnToggleDir');
-  const btnToggleLight = document.getElementById('btnToggleLight');
   const speedSlider = document.getElementById('speedSlider');
   const speedVal = document.getElementById('speedVal');
-  const coreLight = document.getElementById('coreLight');
   const scene = document.querySelector('.lantern-scene');
   const faces = document.querySelectorAll('.lantern-face');
 
-  // Trạng thái vận hành
   let currentAngle = 0;
-  let baseSpeed = 0.35; // Tốc độ góc mỗi frame (degrees)
+  let baseSpeed = 0.35;
   let speedMultiplier = 1;
-  let direction = 1; // 1: Quay thuận (trái sang phải), -1: Quay nghịch
-  let isHovered = false; // Chuột đang nằm trên hình ảnh/đèn
-  let isManuallyPaused = false; // Người dùng chủ động nhấn nút Pause
+  let direction = 1;
+  let isHovered = false;
+  let isManuallyPaused = false;
   let isDragging = false;
   let startX = 0;
   let lastX = 0;
-  let animationFrameId = null;
 
-  // Dữ liệu mô tả 6 bức ảnh
   const photosData = {
-    1: { title: "Ảnh 1: Chân dung cá nhân", desc: "Hình ảnh sinh viên Nguyễn Hoàng Anh - MSSV: 241A010633" },
-    2: { title: "Ảnh 2: Hoạt động học tập", desc: "Thực hành phát triển ứng dụng Web Frontend hiện đại" },
-    3: { title: "Ảnh 3: Trải nghiệm công nghệ", desc: "Nghiên cứu kiến trúc Cloud Hosting & Triển khai Website" },
-    4: { title: "Ảnh 4: Khám phá sáng tạo", desc: "Thiết kế đồ họa và tối ưu trải nghiệm người dùng UI/UX" },
-    5: { title: "Ảnh 5: Kỷ niệm sinh viên", desc: "Khoảnh khắc thanh xuân tại trường Đại học Văn Hiến" },
-    6: { title: "Ảnh 6: Dự án Web nâng cao", desc: "Hoàn thiện đồ án môn học Lập trình Web với Javascript" }
+    1: { title: "Ảnh 1", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" },
+    2: { title: "Ảnh 2", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" },
+    3: { title: "Ảnh 3", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" },
+    4: { title: "Ảnh 4", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" },
+    5: { title: "Ảnh 5", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" },
+    6: { title: "Ảnh 6", desc: "Nguyễn Hoàng Anh - MSSV: 241A010633" }
   };
 
-  /**
-   * Cập nhật trạng thái hiển thị trên giao diện
-   */
   function updateStatusUI() {
     if (!statusBadge || !statusDot) return;
 
     if (isHovered) {
-      statusBadge.textContent = "ĐÃ DỪNG (Đưa chuột vào hình)";
+      statusBadge.textContent = "Đã dừng (Rê chuột vào hình)";
       statusDot.className = "status-pulse-dot paused";
     } else if (isManuallyPaused) {
-      statusBadge.textContent = "TẠM DỪNG (Nút điều khiển)";
+      statusBadge.textContent = "Tạm dừng";
       statusDot.className = "status-pulse-dot paused";
     } else if (isDragging) {
-      statusBadge.textContent = "ĐANG XOAY BẰNG TAY (Kéo chuột)";
+      statusBadge.textContent = "Kéo xoay thủ công";
       statusDot.className = "status-pulse-dot";
     } else {
-      statusBadge.textContent = `ĐANG QUAY (${direction > 0 ? 'Thuận chiều' : 'Ngược chiều'})`;
+      statusBadge.textContent = direction > 0 ? "Đang quay" : "Đang quay ngược";
       statusDot.className = "status-pulse-dot";
     }
 
@@ -74,21 +53,11 @@
     }
 
     if (btnTogglePlay) {
-      if (isManuallyPaused) {
-        btnTogglePlay.innerHTML = '<span class="icon">▶</span> Tiếp tục';
-        btnTogglePlay.classList.add('active');
-      } else {
-        btnTogglePlay.innerHTML = '<span class="icon">⏸</span> Tạm dừng';
-        btnTogglePlay.classList.remove('active');
-      }
+      btnTogglePlay.textContent = isManuallyPaused ? "Tiếp tục" : "Tạm dừng";
     }
   }
 
-  /**
-   * Vòng lặp hoạt họa chính (Animation Loop) sử dụng requestAnimationFrame
-   */
   function animate() {
-    // Chỉ quay khi không bị hover chuột, không bị pause thủ công, và không đang kéo
     if (!isHovered && !isManuallyPaused && !isDragging) {
       currentAngle += baseSpeed * speedMultiplier * direction;
       if (currentAngle >= 360 || currentAngle <= -360) {
@@ -101,29 +70,20 @@
         angleDisplay.textContent = Math.round(((currentAngle % 360) + 360) % 360) + '°';
       }
     }
-
-    animationFrameId = requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
   }
 
-  /**
-   * CÀI ĐẶT SỰ KIỆN CHÍNH THEO ĐÚNG YÊU CẦU ĐỀ BÀI:
-   * - Đưa chuột vào 1 hình nào đó thì đèn dừng lại
-   * - Rê chuột ra thì đèn quay tiếp
-   */
   faces.forEach((face) => {
-    // 1. Khi chuột đi vào một mặt đèn (ảnh)
     face.addEventListener('mouseenter', function () {
       isHovered = true;
       updateStatusUI();
     });
 
-    // 2. Khi chuột rời khỏi mặt đèn
     face.addEventListener('mouseleave', function () {
       isHovered = false;
       updateStatusUI();
     });
 
-    // 3. Khi nhấp vào ảnh để xem phóng to chi tiết (Lightbox)
     face.addEventListener('click', function () {
       const idx = this.getAttribute('data-index');
       const img = this.querySelector('.face-image');
@@ -133,10 +93,8 @@
     });
   });
 
-  // Nếu người dùng đưa chuột vào toàn bộ khung lồng đèn
   if (scene) {
     scene.addEventListener('mouseenter', function (e) {
-      // Cho phép dừng khi rê vào vùng trung tâm đèn
       if (e.target.closest('.lantern-face') || e.target.closest('.lantern-stage')) {
         isHovered = true;
         updateStatusUI();
@@ -149,7 +107,6 @@
       updateStatusUI();
     });
 
-    // HỖ TRỢ KÉO XOAY BẰNG CHUỘT (DRAG TO ROTATE)
     scene.addEventListener('mousedown', function (e) {
       if (e.target.closest('.lantern-controls') || e.target.closest('.lightbox-modal')) return;
       isDragging = true;
@@ -176,12 +133,11 @@
       }
     });
 
-    // HỖ TRỢ CẢM ỨNG TRÊN ĐIỆN THOẠI (TOUCH EVENTS)
     scene.addEventListener('touchstart', function (e) {
       if (e.target.closest('.lantern-controls')) return;
       if (e.touches.length === 1) {
         isDragging = true;
-        isHovered = true; // Chạm vào màn hình cũng dừng quay
+        isHovered = true;
         startX = e.touches[0].clientX;
         lastX = e.touches[0].clientX;
         updateStatusUI();
@@ -209,11 +165,6 @@
     });
   }
 
-  /* ==========================================================================
-     CÁC NÚT ĐIỀU KHIỂN BỔ SUNG (CONTROLS)
-     ========================================================================== */
-
-  // Nút Play / Pause
   if (btnTogglePlay) {
     btnTogglePlay.addEventListener('click', function () {
       isManuallyPaused = !isManuallyPaused;
@@ -221,7 +172,6 @@
     });
   }
 
-  // Nút Đổi chiều quay
   if (btnToggleDir) {
     btnToggleDir.addEventListener('click', function () {
       direction = direction * -1;
@@ -229,23 +179,6 @@
     });
   }
 
-  // Nút Bật / Tắt ánh sáng tim đèn
-  if (btnToggleLight && coreLight) {
-    btnToggleLight.addEventListener('click', function () {
-      const isVisible = coreLight.style.display !== 'none';
-      if (isVisible) {
-        coreLight.style.display = 'none';
-        btnToggleLight.innerHTML = '<span class="icon">💡</span> Bật đèn';
-        btnToggleLight.classList.remove('active');
-      } else {
-        coreLight.style.display = 'block';
-        btnToggleLight.innerHTML = '<span class="icon">🕯️</span> Tắt đèn';
-        btnToggleLight.classList.add('active');
-      }
-    });
-  }
-
-  // Thanh trượt tốc độ quay
   if (speedSlider) {
     speedSlider.addEventListener('input', function () {
       speedMultiplier = parseFloat(this.value);
@@ -255,9 +188,6 @@
     });
   }
 
-  /* ==========================================================================
-     LIGHTBOX PHÓNG TO ẢNH KHI NHẤP CHUỘT
-     ========================================================================== */
   const lightbox = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImage');
   const lightboxTitle = document.getElementById('lightboxTitle');
@@ -271,7 +201,7 @@
     if (lightboxTitle) lightboxTitle.textContent = data.title;
     if (lightboxDesc) lightboxDesc.textContent = data.desc;
     lightbox.classList.add('active');
-    isHovered = true; // Dừng đèn khi đang mở lightbox
+    isHovered = true;
     updateStatusUI();
   }
 
@@ -300,8 +230,6 @@
     }
   });
 
-  // Khởi động vòng lặp và cập nhật UI ban đầu
   updateStatusUI();
   animate();
-
 })();
