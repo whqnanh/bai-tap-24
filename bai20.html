@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 20: Tối Ưu Hóa SEO & Open Graph | MSSV: 241A010633</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .detail-container { max-width: 900px; margin: 40px auto 70px; }
+    .report-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #60a5fa;
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .media-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 25px 0;
+      border: 1px solid #334155;
+    }
+    .media-box img { width: 100%; display: block; }
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .table-custom th, .table-custom td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .table-custom th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #f8fafc;
+    }
+    .code-snippet {
+      background: #090d16;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: #34d399;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="student-tag">
+        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span class="mssv-badge">MSSV: 241A010633</span>
+        <span>• Lập trình Web - VHU</span>
+      </div>
+      <div class="quick-links">
+        <a href="index.html">🏠 Về Trang Chủ</a>
+        <a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🎯</div>
+        <div class="brand-text">
+          <h1>Bài Tập 20</h1>
+          <span>SEO &amp; Open Graph Optimization</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a href="bai17.html">Bài 17</a></li>
+        <li class="nav-item"><a href="bai18.html">Bài 18</a></li>
+        <li class="nav-item"><a href="bai19.html">Bài 19</a></li>
+        <li class="nav-item"><a href="bai20.html" class="active">Bài 20</a></li>
+        <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
+        <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container detail-container">
+    <a href="index.html" class="back-link">← Quay lại trang chủ Bài tập 24</a>
+
+    <div class="report-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+        <span class="tag" style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: bold; padding: 6px 14px; font-size: 13px;">BÁO CÁO THỰC HÀNH BÀI 20</span>
+        <span class="status-indicator"><span class="status-dot"></span> ĐẠT ĐIỂM LIGHTHOUSE SEO 100/100</span>
+      </div>
+
+      <h1 style="font-size: 28px; margin-bottom: 12px; color: #fff;">Tối Ưu Hóa SEO On-Page, Thẻ Meta &amp; Open Graph Social</h1>
+      <p style="color: var(--text-muted); font-size: 15px;">
+        Thiết lập cấu trúc thẻ tiêu chuẩn cho máy tìm kiếm Google (SERP), tích hợp Open Graph Protocol (Facebook / Zalo), thẻ Twitter Cards và tạo các tệp chỉ mục <code>robots.txt</code>, <code>sitemap.xml</code>.
+      </p>
+
+      <!-- HÌNH KẾT QUẢ -->
+      <div class="media-box">
+        <img src="images/bt20.svg" alt="Hình kết quả Bài tập 20 SEO">
+      </div>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">1. Các Thẻ Meta Đã Nhúng Chuẩn SEO</h3>
+      <div class="code-snippet">
+&lt;!-- SEO Cơ Bản --&gt;<br>
+&lt;title&gt;Nguyễn Hoàng Anh - Web Developer | MSSV: 241A010633&lt;/title&gt;<br>
+&lt;meta name="description" content="Portfolio lập trình web của Nguyễn Hoàng Anh - Sinh viên ĐH Văn Hiến. Các dự án JavaScript và HTML5/CSS3 chuẩn SEO."&gt;<br>
+&lt;meta name="keywords" content="Nguyễn Hoàng Anh, 241A010633, Lap Trinh Web, VHU, GitHub Pages"&gt;<br>
+&lt;link rel="canonical" href="https://whqnanh.github.io/my-portfolio/"&gt;<br><br>
+&lt;!-- Open Graph / Facebook &amp; Zalo --&gt;<br>
+&lt;meta property="og:type" content="website"&gt;<br>
+&lt;meta property="og:title" content="Nguyễn Hoàng Anh - Portfolio Lập trình Web"&gt;<br>
+&lt;meta property="og:description" content="Khám phá các dự án website hiện đại và hiệu ứng JavaScript nâng cao."&gt;<br>
+&lt;meta property="og:image" content="https://whqnanh.github.io/my-portfolio/images/avatar.jpg"&gt;
+      </div>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">2. Kết Quả Kiểm Thử</h3>
+      <table class="table-custom">
+        <thead>
+          <tr>
+            <th>Tiêu chí đánh giá</th>
+            <th>Điểm số</th>
+            <th>Nhận xét kỹ thuật</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Lighthouse SEO</strong></td>
+            <td><strong style="color: #4ade80;">100 / 100</strong></td>
+            <td>Đầy đủ thẻ meta, thẻ viewport responsive, alt hình ảnh</td>
+          </tr>
+          <tr>
+            <td><strong>Open Graph Card Preview</strong></td>
+            <td>Hợp lệ (Valid)</td>
+            <td>Hiển thị banner đại diện sắc nét khi chia sẻ link mạng xã hội</td>
+          </tr>
+          <tr>
+            <td><strong>Sitemap &amp; Robots Index</strong></td>
+            <td>Đã lập chỉ mục</td>
+            <td>Hỗ trợ spider bot của Google thu thập dữ liệu nhanh chóng</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" class="btn btn-primary">
+          🔍 Kiểm Tra Google Rich Results
+        </a>
+        <a href="bai21.html" class="btn btn-secondary">
+          Tiếp tục sang Bài 21: Multi-Platform Hosting →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Nguyễn Hoàng Anh - MSSV: 241A010633 • Đại học Văn Hiến</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow19" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bg19)"/>
+
+  <!-- Header Badge -->
+  <rect x="40" y="30" width="180" height="32" rx="16" fill="rgba(168, 85, 247, 0.15)" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="130" y="51" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BÀI TẬP 19 - GITHUB</text>
+
+  <!-- Title -->
+  <text x="40" y="95" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">Deploy Website Lên GitHub Pages &amp; CI/CD</text>
+  <text x="40" y="125" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">Repository: whqnanh/my-portfolio | URL: https://whqnanh.github.io/my-portfolio/</text>
+
+  <!-- GitHub Repo & Deployment Card -->
+  <g filter="url(#shadow19)" transform="translate(40, 150)">
+    <rect width="720" height="300" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <rect width="720" height="42" rx="12" fill="#161b22"/>
+    <rect x="0" y="32" width="720" height="10" fill="#161b22"/>
+    
+    <circle cx="24" cy="21" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="21" r="6" fill="#f59e0b"/>
+    <circle cx="64" cy="21" r="6" fill="#10b981"/>
+    
+    <text x="360" y="26" fill="#8b949e" font-family="monospace" font-size="12" text-anchor="middle">github.com/whqnanh/my-portfolio — Settings &gt; Pages</text>
+
+    <!-- Branch & Deployment Row -->
+    <rect x="25" y="65" width="670" height="70" rx="8" fill="#161b22" stroke="#30363d"/>
+    <circle cx="55" cy="100" r="16" fill="#238636"/>
+    <path d="M48 100 L53 105 L62 94" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="85" y="93" fill="#f0f6fc" font-family="sans-serif" font-size="15" font-weight="bold">Your site is live at https://whqnanh.github.io/my-portfolio/</text>
+    <text x="85" y="115" fill="#8b949e" font-family="sans-serif" font-size="12">Last deployed by GitHub Actions via branch <tspan fill="#58a6ff" font-family="monospace">main</tspan> • 100% Clean build</text>
+
+    <!-- Git Pipeline steps -->
+    <g transform="translate(25, 160)">
+      <rect width="210" height="100" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="15" y="30" fill="#58a6ff" font-family="sans-serif" font-size="12" font-weight="bold">1. GIT COMMIT &amp; PUSH</text>
+      <text x="15" y="55" fill="#c9d1d9" font-family="monospace" font-size="11">git add .</text>
+      <text x="15" y="75" fill="#c9d1d9" font-family="monospace" font-size="11">git commit -m "Deploy"</text>
+      <text x="15" y="92" fill="#3fb950" font-family="sans-serif" font-size="10">✓ Pushed to origin/main</text>
+
+      <rect x="230" width="210" height="100" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="245" y="30" fill="#a371f7" font-family="sans-serif" font-size="12" font-weight="bold">2. GITHUB ACTIONS</text>
+      <text x="245" y="55" fill="#c9d1d9" font-family="sans-serif" font-size="11">pages-build-deployment</text>
+      <text x="245" y="75" fill="#8b949e" font-family="sans-serif" font-size="11">Build: 18s • Fastly CDN</text>
+      <text x="245" y="92" fill="#3fb950" font-family="sans-serif" font-size="10">✓ Pipeline Succeeded</text>
+
+      <rect x="460" width="210" height="100" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="475" y="30" fill="#3fb950" font-family="sans-serif" font-size="12" font-weight="bold">3. PRODUCTION HTTPS</text>
+      <text x="475" y="55" fill="#c9d1d9" font-family="sans-serif" font-size="11">SSL Certificate: DigiCert</text>
+      <text x="475" y="75" fill="#8b949e" font-family="sans-serif" font-size="11">Enforce HTTPS: Checked</text>
+      <text x="475" y="92" fill="#3fb950" font-family="sans-serif" font-size="10">✓ Global CDN Active</text>
+    </g>
+  </g>
+</svg>

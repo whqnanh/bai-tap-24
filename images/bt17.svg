@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="termGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <filter id="shadow17" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bg17)"/>
+  
+  <!-- Subtle decorative grid -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800"/>
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500"/>
+  </g>
+
+  <!-- Header Badge -->
+  <rect x="40" y="30" width="140" height="32" rx="16" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="110" y="51" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BÀI TẬP 17 - DNS</text>
+
+  <!-- Title -->
+  <text x="40" y="95" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">Đăng Ký Domain &amp; Phân Giải Bản Ghi DNS</text>
+  <text x="40" y="125" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">DuckDNS Free Dynamic DNS + Phân giải bản ghi A tới IP 113.185.75.163</text>
+
+  <!-- Terminal Window Mockup -->
+  <g filter="url(#shadow17)" transform="translate(40, 150)">
+    <!-- Window Frame -->
+    <rect width="720" height="300" rx="12" fill="url(#termGrad)" stroke="#334155" stroke-width="1.5"/>
+    <rect width="720" height="40" rx="12" fill="#1e293b"/>
+    <rect x="0" y="30" width="720" height="10" fill="#1e293b"/>
+    
+    <!-- Window controls -->
+    <circle cx="24" cy="20" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="20" r="6" fill="#f59e0b"/>
+    <circle cx="64" cy="20" r="6" fill="#10b981"/>
+    
+    <text x="360" y="25" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Terminal — zsh — macOS (nslookup)</text>
+
+    <!-- Terminal Content -->
+    <text x="30" y="75" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="14" font-weight="600">$ nslookup mywebsite-hoanganh.duckdns.org 8.8.8.8</text>
+    
+    <text x="30" y="110" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="13">Server:        8.8.8.8</text>
+    <text x="30" y="132" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="13">Address:       8.8.8.8#53 (Google Public DNS Standard)</text>
+    
+    <line x1="30" y1="150" x2="690" y2="150" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="30" y="175" fill="#a855f7" font-family="'Fira Code', monospace" font-size="13">Non-authoritative answer:</text>
+    <text x="30" y="202" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="14" font-weight="bold">Name:    <tspan fill="#38bdf8">mywebsite-hoanganh.duckdns.org</tspan></text>
+    <text x="30" y="230" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="14" font-weight="bold">Address: <tspan fill="#4ade80">113.185.75.163</tspan> <tspan fill="#22c55e" font-size="12">(Bản ghi A hoạt động chính xác ✓)</tspan></text>
+    
+    <!-- Status Badge -->
+    <rect x="520" y="250" width="170" height="30" rx="6" fill="rgba(34, 197, 94, 0.2)" stroke="#22c55e" stroke-width="1"/>
+    <circle cx="538" cy="265" r="4" fill="#22c55e"/>
+    <text x="550" y="270" fill="#4ade80" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold">DNS RESOLVED (200)</text>
+  </g>
+</svg>

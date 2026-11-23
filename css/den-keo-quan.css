@@ -1,0 +1,505 @@
+/* ==========================================================================
+   CSS HIỆU ỨNG 3D ĐÈN KÉO QUÂN (ZOETROPE REVOLVING LANTERN)
+   Lồng đèn 6 mặt hình ảnh xoay 360 độ - Tự động dừng khi hover
+   ========================================================================== */
+
+/* SCENE & PERSPECTIVE CONTAINER */
+.lantern-scene {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1300px;
+  perspective-origin: 50% 40%;
+  overflow: hidden;
+  padding: 40px 10px;
+  background: radial-gradient(circle at 50% 45%, #2a0b0b 0%, #170404 45%, #0a0202 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8), 0 10px 40px rgba(220, 38, 38, 0.2);
+  user-select: none;
+}
+
+/* CEILING SUSPENSION CORD */
+.lantern-hanger {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 90px;
+  background: linear-gradient(180deg, #f59e0b, #b45309);
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.lantern-ring {
+  position: absolute;
+  top: 86px;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #f59e0b;
+  border-radius: 50%;
+  z-index: 11;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+}
+
+/* LANTERN TOP ROOF / CAP (MÁI ĐÌNH LỒNG ĐÈN) */
+.lantern-roof {
+  position: relative;
+  width: 340px;
+  height: 45px;
+  background: linear-gradient(180deg, #b91c1c 0%, #7f1d1d 70%, #450a0a 100%);
+  border: 2px solid #fbbf24;
+  border-radius: 50% 50% 8px 8px / 60% 60% 12px 12px;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), inset 0 4px 10px rgba(254, 240, 138, 0.3);
+  margin-top: 75px;
+  margin-bottom: -10px;
+  z-index: 20;
+}
+
+.lantern-roof::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 5%;
+  width: 90%;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 4px;
+}
+
+/* 3D CAROUSEL CYLINDER WRAPPER */
+.lantern-stage {
+  position: relative;
+  width: 260px;
+  height: 360px;
+  transform-style: preserve-3d;
+  margin: 10px auto;
+}
+
+.lantern-carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.05s linear;
+}
+
+/* CANDLE CORE / TIM ĐÈN PHÁT SÁNG BÊN TRONG */
+.lantern-core-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, #ffffff 0%, #ffdf00 35%, #ff5400 70%, rgba(255, 84, 0, 0) 100%);
+  border-radius: 50%;
+  filter: blur(12px);
+  animation: flicker 1.8s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.85; transform: translate(-50%, -50%) scale(0.95); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* 6 LANTERN FACES (6 MẶT ĐÈN) */
+.lantern-face {
+  position: absolute;
+  width: 260px;
+  height: 360px;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #180505;
+  border: 3px solid #d97706;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.35), inset 0 0 30px rgba(0, 0, 0, 0.7);
+  backface-visibility: visible;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s, filter 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Face positioning: 6 faces at 60deg intervals, Radius ~ 230px */
+.lantern-face[data-index="1"] { transform: rotateY(0deg) translateZ(230px); }
+.lantern-face[data-index="2"] { transform: rotateY(60deg) translateZ(230px); }
+.lantern-face[data-index="3"] { transform: rotateY(120deg) translateZ(230px); }
+.lantern-face[data-index="4"] { transform: rotateY(180deg) translateZ(230px); }
+.lantern-face[data-index="5"] { transform: rotateY(240deg) translateZ(230px); }
+.lantern-face[data-index="6"] { transform: rotateY(300deg) translateZ(230px); }
+
+/* Decorative frame around photo */
+.face-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.face-image-wrap {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.face-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay gradient & Caption */
+.face-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 10px 8px;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 2, 2, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.face-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.face-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Traditional Ornamental Corner Accents */
+.face-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: #fbbf24;
+  border-style: solid;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.corner-tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.corner-tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.corner-bl { bottom: 35px; left: 12px; border-width: 0 0 2px 2px; }
+.corner-br { bottom: 35px; right: 12px; border-width: 0 2px 2px 0; }
+
+/* HOVER EFFECT ON A SPECIFIC FACE */
+.lantern-face:hover {
+  border-color: #fde047;
+  box-shadow: 0 0 35px rgba(253, 224, 71, 0.7), inset 0 0 15px rgba(253, 224, 71, 0.3);
+  filter: brightness(1.15);
+}
+
+.lantern-face:hover .face-image {
+  transform: scale(1.06);
+}
+
+/* LANTERN BASE (CHÂN ĐẾ CHẠM KHẮC) */
+.lantern-base {
+  position: relative;
+  width: 320px;
+  height: 38px;
+  background: linear-gradient(180deg, #450a0a 0%, #7f1d1d 40%, #b91c1c 100%);
+  border: 2px solid #fbbf24;
+  border-radius: 8px 8px 50% 50% / 12px 12px 60% 60%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.3);
+  margin-top: -10px;
+  z-index: 20;
+}
+
+/* HANGING RED TASSELS (TUA RUA ĐỎ) */
+.lantern-tassels {
+  position: relative;
+  width: 280px;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 15;
+}
+
+.tassel-item {
+  width: 4px;
+  height: 55px;
+  background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.5);
+  animation: sway 3s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.tassel-item:nth-child(2) { animation-delay: 0.3s; height: 65px; }
+.tassel-item:nth-child(3) { animation-delay: 0.7s; height: 60px; }
+.tassel-item:nth-child(4) { animation-delay: 0.2s; height: 62px; }
+
+.tassel-item::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: -4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+@keyframes sway {
+  0% { transform: rotate(-6deg); }
+  100% { transform: rotate(6deg); }
+}
+
+/* ==========================================================================
+   STATUS BADGE & INTERACTIVE CONTROL PANEL
+   ========================================================================== */
+.lantern-status-badge {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #e2e8f0;
+  z-index: 30;
+}
+
+.status-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.status-pulse-dot.paused {
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.lantern-hint {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #fbbf24;
+  z-index: 30;
+}
+
+/* CONTROLS BAR */
+.lantern-controls {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  z-index: 30;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.control-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: #334155;
+  border-color: #64748b;
+  transform: translateY(-1px);
+}
+
+.control-btn.active {
+  background: #ef4444;
+  border-color: #f87171;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.speed-control input[type="range"] {
+  width: 100px;
+  cursor: pointer;
+  accent-color: #f59e0b;
+}
+
+/* ==========================================================================
+   LIGHTBOX MODAL XEM CHI TIẾT ẢNH
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #111827;
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.3);
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-image-wrap {
+  max-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.lightbox-close:hover {
+  background: #ef4444;
+}
+
+/* RESPONSIVE SCENE */
+@media (max-width: 600px) {
+  .lantern-scene {
+    min-height: 500px;
+    perspective: 900px;
+  }
+
+  .lantern-roof {
+    width: 260px;
+  }
+
+  .lantern-stage {
+    width: 200px;
+    height: 280px;
+  }
+
+  .lantern-face {
+    width: 200px;
+    height: 280px;
+  }
+
+  /* Recalculate for 200px width: R ~ 173px */
+  .lantern-face[data-index="1"] { transform: rotateY(0deg) translateZ(173px); }
+  .lantern-face[data-index="2"] { transform: rotateY(60deg) translateZ(173px); }
+  .lantern-face[data-index="3"] { transform: rotateY(120deg) translateZ(173px); }
+  .lantern-face[data-index="4"] { transform: rotateY(180deg) translateZ(173px); }
+  .lantern-face[data-index="5"] { transform: rotateY(240deg) translateZ(173px); }
+  .lantern-face[data-index="6"] { transform: rotateY(300deg) translateZ(173px); }
+
+  .lantern-base {
+    width: 250px;
+  }
+
+  .lantern-status-badge {
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .lantern-hint {
+    position: static;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 19: Deploy Website Lên GitHub Pages | MSSV: 241A010633</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .detail-container { max-width: 900px; margin: 40px auto 70px; }
+    .report-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #60a5fa;
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .media-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 25px 0;
+      border: 1px solid #334155;
+    }
+    .media-box img { width: 100%; display: block; }
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .table-custom th, .table-custom td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .table-custom th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="student-tag">
+        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span class="mssv-badge">MSSV: 241A010633</span>
+        <span>• Lập trình Web - VHU</span>
+      </div>
+      <div class="quick-links">
+        <a href="index.html">🏠 Về Trang Chủ</a>
+        <a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🐙</div>
+        <div class="brand-text">
+          <h1>Bài Tập 19</h1>
+          <span>GitHub Pages &amp; CI/CD Pipeline</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a href="bai17.html">Bài 17</a></li>
+        <li class="nav-item"><a href="bai18.html">Bài 18</a></li>
+        <li class="nav-item"><a href="bai19.html" class="active">Bài 19</a></li>
+        <li class="nav-item"><a href="bai20.html">Bài 20</a></li>
+        <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
+        <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container detail-container">
+    <a href="index.html" class="back-link">← Quay lại trang chủ Bài tập 24</a>
+
+    <div class="report-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+        <span class="tag" style="background: rgba(168, 85, 247, 0.2); color: #c084fc; font-weight: bold; padding: 6px 14px; font-size: 13px;">BÁO CÁO THỰC HÀNH BÀI 19</span>
+        <span class="status-indicator"><span class="status-dot"></span> PRODUCTION LIVE TRÊN GITHUB PAGES</span>
+      </div>
+
+      <h1 style="font-size: 28px; margin-bottom: 12px; color: #fff;">Xuất Bản Website Lên Nền Tảng GitHub Pages Bằng Git CI/CD</h1>
+      <p style="color: var(--text-muted); font-size: 15px;">
+        Khởi tạo kho lưu trữ GitHub <code>whqnanh/my-portfolio</code>, quản lý mã nguồn phiên bản bằng Git, tự động hóa quy trình triển khai bằng GitHub Actions và xuất bản website đa trang có chứng chỉ HTTPS.
+      </p>
+
+      <!-- HÌNH KẾT QUẢ -->
+      <div class="media-box">
+        <img src="images/bt19.svg" alt="Hình kết quả Bài tập 19 GitHub Pages">
+      </div>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">1. Thông Số Triển Khai GitHub</h3>
+      <table class="table-custom">
+        <thead>
+          <tr>
+            <th>Hạng mục</th>
+            <th>Thông số chi tiết</th>
+            <th>Trạng thái</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>GitHub Repository</strong></td>
+            <td><a href="https://github.com/whqnanh/my-portfolio" target="_blank" rel="noopener" style="color: #60a5fa;">whqnanh/my-portfolio</a></td>
+            <td>Public Repository</td>
+          </tr>
+          <tr>
+            <td><strong>Nhánh phát hành (Branch)</strong></td>
+            <td><code>main</code> / Thư mục <code>/ (root)</code></td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td><strong>Hạ tầng Hosting</strong></td>
+            <td>GitHub Pages Fastly CDN toàn cầu</td>
+            <td>Tốc độ phản hồi &lt; 50ms</td>
+          </tr>
+          <tr>
+            <td><strong>Chứng chỉ bảo mật SSL</strong></td>
+            <td>DigiCert TLS 1.3 Chuẩn HTTPS</td>
+            <td>Enforced HTTPS ✓</td>
+          </tr>
+          <tr>
+            <td><strong>Địa chỉ trang web</strong></td>
+            <td><a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" style="color: #4ade80; font-weight: bold;">https://whqnanh.github.io/my-portfolio/</a></td>
+            <td>✅ Hoạt động 100%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">2. Cấu Trúc Mã Nguồn Đã Xuất Bản</h3>
+      <ul style="color: var(--text-muted); font-size: 14px; line-height: 1.8; padding-left: 20px;">
+        <li><code>index.html</code>: Trang chủ Portfolio giới thiệu bản thân sinh viên Nguyễn Hoàng Anh.</li>
+        <li><code>about.html</code>: Trang tiểu sử, học vấn và các kỹ năng lập trình web.</li>
+        <li><code>contact.html</code>: Trang liên hệ tích hợp biểu mẫu tương tác.</li>
+        <li><code>js/script.js</code> &amp; <code>css/style.css</code>: Giao diện hiện đại, responsive 100%.</li>
+      </ul>
+
+      <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-primary">
+          🐙 Mở Website GitHub Pages
+        </a>
+        <a href="https://github.com/whqnanh/my-portfolio" target="_blank" rel="noopener" class="btn btn-secondary">
+          Xem Kho GitHub Repo
+        </a>
+        <a href="bai20.html" class="btn btn-secondary">
+          Sang Bài 20: Tối ưu SEO →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Nguyễn Hoàng Anh - MSSV: 241A010633 • Đại học Văn Hiến</p>
+    </div>
+  </footer>
+</body>
+</html>

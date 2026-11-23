@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 24: Tổng Hợp Kết Quả Thực Hành &amp; Đèn Kéo Quân 3D | MSSV: 241A010633</title>
+  <meta name="description" content="Bài tập 24: Trang chủ tổng hợp liên kết kết quả Bài tập 17, 18, 19, 20, 21, 22 và hiệu ứng JavaScript Đèn Kéo Quân 3D của sinh viên Nguyễn Hoàng Anh - MSSV: 241A010633.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/den-keo-quan.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP BAR: THÔNG TIN SINH VIÊN & MSSV
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="student-tag">
+        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span class="mssv-badge">MSSV: 241A010633</span>
+        <span>• Môn học: <strong>Lập trình Web</strong></span>
+        <span>• Trường: <strong>Đại học Văn Hiến (VHU)</strong></span>
+      </div>
+      <div class="quick-links">
+        <a href="#den-keo-quan-section">🏮 Xem Đèn Kéo Quân</a>
+        <a href="#projects-section">📁 Danh mục Bài tập</a>
+        <a href="https://github.com/whqnanh/bai-tap-24" target="_blank" rel="noopener">🐙 GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MENU CHÍNH (NAVIGATION BAR)
+       ========================================================================== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">💻</div>
+        <div class="brand-text">
+          <h1>Bài Tập 24 — Lập Trình Web</h1>
+          <span>MSSV: 241A010633 • Nguyễn Hoàng Anh</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu">☰</button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="active">🏠 Trang chủ</a></li>
+        <li class="nav-item"><a href="bai17.html">Bài 17: DNS</a></li>
+        <li class="nav-item"><a href="bai18.html">Bài 18: FTP</a></li>
+        <li class="nav-item"><a href="bai19.html">Bài 19: GitHub</a></li>
+        <li class="nav-item"><a href="bai20.html">Bài 20: SEO</a></li>
+        <li class="nav-item"><a href="bai21.html">Bài 21: 4 Nền tảng</a></li>
+        <li class="nav-item"><a href="bai22.html">Bài 22: SSL/HTTPS</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="hero-badge">
+        ✨ BÁI TẬP 24 • KẾT QUẢ THỰC HÀNH &amp; HIỆU ỨNG JAVASCRIPT NÂNG CAO
+      </div>
+
+      <h1 class="hero-title">
+        Tổng Hợp Kết Quả Bài Tập 17 — 22 &amp;<br>
+        Hiệu Ứng 3D Đèn Kéo Quân Javascript
+      </h1>
+
+      <p class="hero-subtitle">
+        Cổng thông tin nghiệm thu toàn diện học phần Lập trình Web. Tích hợp menu điều hướng đến các trang nhánh kết quả thực hành (Domain, FTP, GitHub Pages, SEO, Multi-Hosting, SSL) và mô hình <strong>Đèn Kéo Quân 3D xoay 6 mặt hình ảnh cá nhân</strong> với cơ chế dừng khi đưa chuột vào và quay tiếp khi rê chuột ra.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#den-keo-quan-section" class="btn btn-primary">
+          🏮 Trải Nghiệm Đèn Kéo Quân 3D
+        </a>
+        <a href="#projects-section" class="btn btn-secondary">
+          📑 Xem Báo Cáo Bài Tập 17 - 22
+        </a>
+        <a href="den-keo-quan.html" class="btn btn-secondary">
+          🖥️ Mở Trang Đèn Toàn Màn Hình
+        </a>
+      </div>
+
+      <!-- THANH CHỈ SỐ NHANH (QUICK STATS) -->
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-number">07</div>
+          <div class="stat-label">Hạng Mục Bài Tập Hoàn Thành</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">06</div>
+          <div class="stat-label">Mặt Ảnh Cá Nhân Đèn Kéo Quân</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">04</div>
+          <div class="stat-label">Nền Tảng Đã Public Hoạt Động</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Kiểm Thử Trực Tuyến Thành Công</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: DEMO TRỰC TIẾP ĐÈN KÉO QUÂN 3D JAVASCRIPT
+       ========================================================================== -->
+  <section class="section" id="den-keo-quan-section" style="padding-top: 10px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">🌟 HIỆU ỨNG JAVASCRIPT ĐẶC TRƯNG</span>
+        <h2 class="section-title">Đèn Kéo Quân 3D — Lồng Đèn Xoay 6 Mặt Ảnh Chụp</h2>
+        <p class="section-desc">
+          Lập trình bằng thuần <strong>JavaScript (requestAnimationFrame)</strong> và <strong>CSS 3D Transforms</strong>.
+          <br><strong style="color: #fbbf24;">Đưa chuột vào hình ảnh: Đèn dừng lại • Rê chuột ra ngoài: Đèn quay tiếp</strong>.
+        </p>
+      </div>
+
+      <!-- KHUNG HIỆU ỨNG 3D ĐÈN KÉO QUÂN -->
+      <div class="lantern-scene">
+        <!-- Huy hiệu trạng thái -->
+        <div class="lantern-status-badge">
+          <span class="status-pulse-dot" id="statusDot"></span>
+          <span id="lanternStatusText">ĐANG QUAY (Tự động)</span>
+          <span style="opacity: 0.5;">|</span>
+          <span>Góc: <strong id="angleDisplay" style="color: #fbbf24;">0°</strong></span>
+        </div>
+
+        <div class="lantern-hint">
+          💡 Rê chuột vào ảnh: <strong>Dừng</strong> • Rời chuột: <strong>Quay</strong> • Nhấp: <strong>Phóng to</strong>
+        </div>
+
+        <!-- Dây treo và khuyên vàng -->
+        <div class="lantern-hanger"></div>
+        <div class="lantern-ring"></div>
+
+        <!-- Mái đình lồng đèn (Lantern Roof) -->
+        <div class="lantern-roof"></div>
+
+        <!-- Khối quay 3D lồng đèn (Stage) -->
+        <div class="lantern-stage">
+          <!-- Tim đèn phát sáng lung linh -->
+          <div class="lantern-core-light" id="coreLight"></div>
+
+          <!-- Trục 6 mặt lồng đèn -->
+          <div class="lantern-carousel" id="lanternCarousel">
+            
+            <!-- MẶT 1 -->
+            <div class="lantern-face" data-index="1">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo1.jpg" alt="Ảnh 1 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 01 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #1</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MẶT 2 -->
+            <div class="lantern-face" data-index="2">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo2.jpg" alt="Ảnh 2 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 02 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #2</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MẶT 3 -->
+            <div class="lantern-face" data-index="3">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo3.jpg" alt="Ảnh 3 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 03 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #3</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MẶT 4 -->
+            <div class="lantern-face" data-index="4">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo4.jpg" alt="Ảnh 4 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 04 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #4</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MẶT 5 -->
+            <div class="lantern-face" data-index="5">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo5.jpg" alt="Ảnh 5 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 05 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MẶT 6 -->
+            <div class="lantern-face" data-index="6">
+              <span class="face-corner corner-tl"></span>
+              <span class="face-corner corner-tr"></span>
+              <span class="face-corner corner-bl"></span>
+              <span class="face-corner corner-br"></span>
+              <div class="face-inner">
+                <div class="face-image-wrap">
+                  <img src="images/photo6.jpg" alt="Ảnh 6 Nguyễn Hoàng Anh" class="face-image" loading="eager">
+                </div>
+                <div class="face-overlay">
+                  <span class="face-num">MẶT 06 / 06</span>
+                  <span class="face-title">Nguyễn Hoàng Anh #6</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Chân đế lồng đèn (Lantern Base) -->
+        <div class="lantern-base"></div>
+
+        <!-- Tua rua đỏ trang trí (Tassels) -->
+        <div class="lantern-tassels">
+          <div class="tassel-item"></div>
+          <div class="tassel-item"></div>
+          <div class="tassel-item"></div>
+          <div class="tassel-item"></div>
+        </div>
+
+        <!-- THANH ĐIỀU KHIỂN TƯƠNG TÁC -->
+        <div class="lantern-controls">
+          <button class="control-btn" id="btnTogglePlay">
+            <span class="icon">⏸</span> Tạm dừng
+          </button>
+
+          <button class="control-btn" id="btnToggleDir">
+            <span class="icon">🔄</span> Đổi chiều
+          </button>
+
+          <div class="speed-control">
+            <span>Tốc độ:</span>
+            <input type="range" id="speedSlider" min="0.2" max="3.0" step="0.2" value="1.0">
+            <span id="speedVal" style="color: #fbbf24; font-weight: bold;">1.0x</span>
+          </div>
+
+          <button class="control-btn" id="btnToggleLight">
+            <span class="icon">🕯️</span> Tắt đèn
+          </button>
+
+          <a href="den-keo-quan.html" class="control-btn" style="background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5;">
+            🖥️ Mở trang chuyên sâu →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: DANH MỤC KẾT QUẢ BÀI TẬP 17 ĐẾN 22 & ĐÈN KÉO QUÂN
+       ========================================================================== -->
+  <section class="section" id="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📁 TỔNG HỢP LIÊN KẾT &amp; HÌNH KẾT QUẢ</span>
+        <h2 class="section-title">Danh Mục Kết Quả Các Bài Tập Thực Hành</h2>
+        <p class="section-desc">
+          Mỗi thẻ bài tập hiển thị hình ảnh minh họa kết quả thực hành, các thông số kỹ thuật cốt lõi và liên kết trực tiếp đến trang nhánh chi tiết.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- CARD 1: BÀI TẬP 17 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt17.svg" alt="Kết quả Bài tập 17 DNS">
+            <div class="card-badge-top">DUCKDNS • RECORD A</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 17</span>
+              <span class="status-indicator"><span class="status-dot"></span> ĐÃ KIỂM THỬ DNS</span>
+            </div>
+            <h3 class="card-title">Đăng Ký Domain &amp; Kiểm Tra Bản Ghi DNS</h3>
+            <p class="card-desc">
+              Đăng ký tên miền miễn phí <code>mywebsite-hoanganh.duckdns.org</code>, tạo bản ghi A trỏ tới IP <code>113.185.75.163</code> và kiểm tra phân giải DNS qua lệnh <code>nslookup</code> trên Terminal macOS.
+            </p>
+            <div class="card-tags">
+              <span class="tag">DuckDNS</span>
+              <span class="tag">Record A</span>
+              <span class="tag">nslookup</span>
+              <span class="tag">Port 53</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai17.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" class="btn btn-secondary">Mở Tên Miền</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: BÀI TẬP 18 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt18.svg" alt="Kết quả Bài tập 18 FTP">
+            <div class="card-badge-top">FTP CỔNG 21 • /htdocs</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 18</span>
+              <span class="status-indicator"><span class="status-dot"></span> ĐÃ UPLOAD 100%</span>
+            </div>
+            <h3 class="card-title">Upload Website Qua Giao Thức FTP/SFTP</h3>
+            <p class="card-desc">
+              Kết nối FTP đến máy chủ <code>ftpupload.net:21</code> của InfinityFree với tài khoản <code>if0_43511079</code>, tải toàn bộ trang CV cá nhân lên thư mục <code>/htdocs</code> và phát hành website trực tuyến.
+            </p>
+            <div class="card-tags">
+              <span class="tag">InfinityFree</span>
+              <span class="tag">FTP / SFTP</span>
+              <span class="tag">Port 21</span>
+              <span class="tag">CV Cá Nhân</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai18.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" class="btn btn-secondary">Xem Web CV Live</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: BÀI TẬP 19 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt19.svg" alt="Kết quả Bài tập 19 GitHub Pages">
+            <div class="card-badge-top">GITHUB PAGES • CI/CD</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 19</span>
+              <span class="status-indicator"><span class="status-dot"></span> LIVE TRÊN FASTLY CDN</span>
+            </div>
+            <h3 class="card-title">Deploy Website Lên GitHub Pages &amp; CI/CD</h3>
+            <p class="card-desc">
+              Triển khai website Portfolio cá nhân từ kho lưu trữ <code>whqnanh/my-portfolio</code> thông qua GitHub Actions CI/CD tự động, hỗ trợ phân phối mạng toàn cầu Fastly CDN và HTTPS an toàn.
+            </p>
+            <div class="card-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Git Branch main</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Fastly CDN</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai19.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Xem Live Site</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: BÀI TẬP 20 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt20.svg" alt="Kết quả Bài tập 20 SEO">
+            <div class="card-badge-top">SEO SCORE 100 • OPEN GRAPH</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 20</span>
+              <span class="status-indicator"><span class="status-dot"></span> CHUẨN GOOGLE SERP</span>
+            </div>
+            <h3 class="card-title">Tối Ưu Hóa SEO On-Page &amp; Thẻ Open Graph</h3>
+            <p class="card-desc">
+              Cấu hình hoàn chỉnh hệ thống thẻ tiêu đề chuẩn SEO, mô tả trang, thẻ Open Graph cho Facebook/Zalo, Twitter Cards, thiết lập tệp chỉ mục <code>robots.txt</code> và sơ đồ website <code>sitemap.xml</code>.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Meta Tags</span>
+              <span class="tag">Open Graph</span>
+              <span class="tag">Twitter Cards</span>
+              <span class="tag">Lighthouse 100</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai20.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Kiểm Thử SEO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: BÀI TẬP 21 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt21.svg" alt="Kết quả Bài tập 21 Multi-Cloud">
+            <div class="card-badge-top">4 NỀN TẢNG • MULTI-CLOUD</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 21</span>
+              <span class="status-indicator"><span class="status-dot"></span> 4 LINK ĐANG LIVE</span>
+            </div>
+            <h3 class="card-title">Public Website Trên 4 Nền Tảng Miễn Phí</h3>
+            <p class="card-desc">
+              Báo cáo nghiệm thu 4 hạ tầng web hosting công cộng đang hoạt động 100%: GitHub Pages, InfinityFree FTP Hosting, DuckDNS Dynamic Domain, và Netlify/Vercel Serverless Edge.
+            </p>
+            <div class="card-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">InfinityFree</span>
+              <span class="tag">DuckDNS</span>
+              <span class="tag">Netlify/Vercel</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai21.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="bai21.html#so-sanh" class="btn btn-secondary">Bảng So Sánh</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: BÀI TẬP 22 -->
+        <div class="project-card">
+          <div class="card-media">
+            <img src="images/bt22.svg" alt="Kết quả Bài tập 22 SSL">
+            <div class="card-badge-top">SSL TLS 1.3 • HTTPS ENFORCE</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number">BÀI TẬP 22</span>
+              <span class="status-indicator"><span class="status-dot"></span> BẢO MẬT MÃ HÓA</span>
+            </div>
+            <h3 class="card-title">Cấu Hình Bảo Mật SSL/HTTPS &amp; Custom Domain</h3>
+            <p class="card-desc">
+              Kích hoạt chứng chỉ số TLS/SSL DigiCert 256-bit chuẩn HTTPS, cấu hình tự động cưỡng chế chuyển hướng (Enforce HTTPS) và định tuyến tên miền tùy biến thông qua bản ghi CNAME.
+            </p>
+            <div class="card-tags">
+              <span class="tag">TLS 1.3</span>
+              <span class="tag">HTTPS Padlock</span>
+              <span class="tag">Custom Domain</span>
+              <span class="tag">CNAME Record</span>
+            </div>
+            <div class="card-footer">
+              <a href="bai22.html" class="btn btn-primary">Xem Trang Nhánh</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Kiểm Tra Khóa SSL</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: BÀI ĐÈN KÉO QUÂN (FEATURED) -->
+        <div class="project-card featured">
+          <div class="featured-ribbon">⭐ BÀI TẬP JAVASCRIPT</div>
+          <div class="card-media">
+            <img src="images/den-keo-quan-thumb.svg" alt="Hiệu ứng Đèn kéo quân 3D">
+            <div class="card-badge-top">HIỆU ỨNG JS 3D • 6 MẶT ẢNH</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-number" style="color: #fbbf24;">HIỆU ỨNG JAVASCRIPT</span>
+              <span class="status-indicator"><span class="status-dot"></span> HOẠT ĐỘNG HOÀN HẢO</span>
+            </div>
+            <h3 class="card-title">Đèn Kéo Quân 3D Xoay Vòng Tròn 6 Mặt Ảnh</h3>
+            <p class="card-desc">
+              Trang web hiệu ứng 3D hiển thị 6 ảnh cá nhân của sinh viên Nguyễn Hoàng Anh. Đèn quay liên tục quanh trục Y, <strong>dừng lại ngay lập tức khi rê chuột vào hình</strong> và <strong>tiếp tục quay khi rê chuột ra</strong>.
+            </p>
+            <div class="card-tags">
+              <span class="tag">6 Mặt Ảnh</span>
+              <span class="tag">Hover to Pause</span>
+              <span class="tag">Mouse Leave Resume</span>
+              <span class="tag">3D Transform</span>
+            </div>
+            <div class="card-footer">
+              <a href="den-keo-quan.html" class="btn btn-primary" style="background: linear-gradient(135deg, #ef4444, #f59e0b);">
+                🏮 Mở Trang Đèn Kéo Quân
+              </a>
+              <a href="#den-keo-quan-section" class="btn btn-secondary">
+                Xem Demo Tại Đây
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: THÔNG TIN TÁC GIẢ & BẢN QUYỀN
+       ========================================================================== -->
+  <section class="author-section">
+    <div class="container">
+      <div class="profile-card">
+        <img src="images/avatar.jpg" alt="Ảnh đại diện Nguyễn Hoàng Anh" class="profile-avatar">
+        <div class="profile-info">
+          <div class="profile-name">
+            Nguyễn Hoàng Anh
+            <span class="mssv-badge">MSSV: 241A010633</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 6px;">
+            Sinh viên chuyên ngành Công nghệ Thông tin - Trường Đại học Văn Hiến (VHU). Hoàn thành đầy đủ các yêu cầu học phần Lập trình Web: Xây dựng hiệu ứng Đèn kéo quân JavaScript 3D, thiết kế giao diện trang chủ index.html tổng hợp kết quả bài tập 17 đến 22, cấu hình menu điều hướng và deploy trực tiếp lên nền tảng GitHub Pages.
+          </p>
+          <div class="profile-details">
+            <div>Họ và tên: <strong>Nguyễn Hoàng Anh</strong></div>
+            <div>Mã số sinh viên: <strong>241A010633</strong></div>
+            <div>Lớp học phần: <strong>Lập trình Web</strong></div>
+            <div>Trường đào tạo: <strong>Đại học Văn Hiến (VHU)</strong></div>
+            <div>GitHub cá nhân: <a href="https://github.com/whqnanh" target="_blank" rel="noopener" style="color: #60a5fa;">@whqnanh</a></div>
+            <div>Mã nguồn dự án: <a href="https://github.com/whqnanh/bai-tap-24" target="_blank" rel="noopener" style="color: #60a5fa;">whqnanh/bai-tap-24</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 6px;">
+        © 2026 Nguyễn Hoàng Anh • MSSV: <strong>241A010633</strong> • Trường Đại học Văn Hiến.
+      </p>
+      <p style="font-size: 12px; color: #64748b;">
+        Mã nguồn được lưu trữ tại <a href="https://github.com/whqnanh/bai-tap-24" target="_blank" rel="noopener">GitHub: whqnanh/bai-tap-24</a> và triển khai tự động qua GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Đóng">&times;</button>
+      <div class="lightbox-image-wrap">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Chi tiết hình ảnh" id="lightboxImage" class="lightbox-image">
+      </div>
+      <div class="lightbox-caption">
+        <div>
+          <h4 id="lightboxTitle" style="color: #fbbf24; font-size: 16px; margin-bottom: 4px;">Tiêu đề ảnh</h4>
+          <p id="lightboxDesc" style="color: #94a3b8; font-size: 13px;">Mô tả ảnh</p>
+        </div>
+        <span class="mssv-badge">MSSV: 241A010633</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/den-keo-quan.js"></script>
+  <script>
+    // Responsive Navbar Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Đóng mobile menu khi nhấn vào một liên kết
+    document.querySelectorAll('.nav-item a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 900 && navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

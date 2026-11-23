@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 18: Upload Website Qua FTP/SFTP | MSSV: 241A010633</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .detail-container { max-width: 900px; margin: 40px auto 70px; }
+    .report-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #60a5fa;
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .media-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 25px 0;
+      border: 1px solid #334155;
+    }
+    .media-box img { width: 100%; display: block; }
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .table-custom th, .table-custom td {
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .table-custom th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="student-tag">
+        <span>👨‍🎓 Sinh viên: <strong>Nguyễn Hoàng Anh</strong></span>
+        <span class="mssv-badge">MSSV: 241A010633</span>
+        <span>• Lập trình Web - VHU</span>
+      </div>
+      <div class="quick-links">
+        <a href="index.html">🏠 Về Trang Chủ</a>
+        <a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🚀</div>
+        <div class="brand-text">
+          <h1>Bài Tập 18</h1>
+          <span>Upload Website qua FTP / SFTP</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a href="bai17.html">Bài 17</a></li>
+        <li class="nav-item"><a href="bai18.html" class="active">Bài 18</a></li>
+        <li class="nav-item"><a href="bai19.html">Bài 19</a></li>
+        <li class="nav-item"><a href="bai20.html">Bài 20</a></li>
+        <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
+        <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
+        <li class="nav-item highlight"><a href="den-keo-quan.html">🏮 Đèn Kéo Quân</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container detail-container">
+    <a href="index.html" class="back-link">← Quay lại trang chủ Bài tập 24</a>
+
+    <div class="report-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+        <span class="tag" style="background: rgba(249, 115, 22, 0.2); color: #fb923c; font-weight: bold; padding: 6px 14px; font-size: 13px;">BÁO CÁO THỰC HÀNH BÀI 18</span>
+        <span class="status-indicator"><span class="status-dot"></span> ĐÃ DEPLOY LÊN HOSTING THỰC TẾ (200 OK)</span>
+      </div>
+
+      <h1 style="font-size: 28px; margin-bottom: 12px; color: #fff;">Upload Website CV Lên Web Hosting InfinityFree Qua FTP</h1>
+      <p style="color: var(--text-muted); font-size: 15px;">
+        Thiết lập kết nối giao thức truyền tệp FTP (Cổng 21) tới máy chủ Linux của InfinityFree, quản lý thư mục gốc <code>/htdocs</code> và tải lên toàn bộ mã nguồn website CV cá nhân kèm ảnh chân dung.
+      </p>
+
+      <!-- HÌNH KẾT QUẢ -->
+      <div class="media-box">
+        <img src="images/bt18.svg" alt="Hình kết quả Bài tập 18 FTP">
+      </div>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">1. Thông Số Máy Chủ FTP Cung Cấp</h3>
+      <table class="table-custom">
+        <thead>
+          <tr>
+            <th>Thông số FTP</th>
+            <th>Giá trị thực tế</th>
+            <th>Ghi chú vận hành</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FTP Host / Server</strong></td>
+            <td><code style="color: #fb923c;">ftpupload.net</code></td>
+            <td>Máy chủ FTP cụm hosting InfinityFree</td>
+          </tr>
+          <tr>
+            <td><strong>FTP Username</strong></td>
+            <td><code>if0_43511079</code></td>
+            <td>Tài khoản định danh hệ thống</td>
+          </tr>
+          <tr>
+            <td><strong>FTP Port</strong></td>
+            <td>21 (Explicit FTP over TLS)</td>
+            <td>Cổng truyền dữ liệu mạng tiêu chuẩn</td>
+          </tr>
+          <tr>
+            <td><strong>Thư mục gốc tải lên</strong></td>
+            <td><code>/htdocs</code></td>
+            <td>Thư mục công cộng phục vụ web server Apache</td>
+          </tr>
+          <tr>
+            <td><strong>Tệp tin tải lên</strong></td>
+            <td><code>index.html</code>, <code>avatar.jpg</code></td>
+            <td>100% tệp tin đã tải lên thành công</td>
+          </tr>
+          <tr>
+            <td><strong>Địa chỉ Website Live</strong></td>
+            <td><a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" style="color: #60a5fa;">http://hoanganh-cv.42web.io</a></td>
+            <td>Trang web CV cá nhân hoạt động thực tế trên Internet</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #fff; margin: 25px 0 10px;">2. Các Bước Kỹ Thuật Đã Thực Hiện</h3>
+      <ol style="color: var(--text-muted); font-size: 14px; line-height: 1.8; padding-left: 20px;">
+        <li>Truy cập bảng điều khiển InfinityFree Control Panel và trích xuất thông tin tài khoản FTP.</li>
+        <li>Thiết lập phiên làm việc FTP kết nối tới <code>ftpupload.net:21</code>.</li>
+        <li>Định vị thư mục gốc <code>/htdocs</code>, dọn dẹp các tệp mẫu ban đầu.</li>
+        <li>Tải các tệp <code>index.html</code> (trang CV cá nhân sinh viên Nguyễn Hoàng Anh - MSSV: 241A010633) và ảnh đại diện <code>avatar.jpg</code> lên máy chủ.</li>
+        <li>Kiểm thử truy cập trực tuyến trên trình duyệt qua đường dẫn chính thức.</li>
+      </ol>
+
+      <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" class="btn btn-primary">
+          🚀 Mở Website CV Thực Tế
+        </a>
+        <a href="bai19.html" class="btn btn-secondary">
+          Tiếp tục sang Bài 19: GitHub Pages →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Nguyễn Hoàng Anh - MSSV: 241A010633 • Đại học Văn Hiến</p>
+    </div>
+  </footer>
+</body>
+</html>
