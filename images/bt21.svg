@@ -8,22 +8,13 @@
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
     </filter>
   </defs>
-
   <rect width="800" height="500" rx="16" fill="url(#bg21)"/>
-
-  <!-- Header Badge -->
   <rect x="40" y="30" width="220" height="32" rx="16" fill="rgba(59, 130, 246, 0.15)" stroke="#3b82f6" stroke-width="1.5"/>
   <text x="150" y="51" fill="#60a5fa" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BÀI TẬP 21 - MULTI-CLOUD</text>
-
-  <!-- Title -->
   <text x="40" y="95" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">Public Website Trên 4 Nền Tảng Miễn Phí</text>
   <text x="40" y="125" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">GitHub Pages • InfinityFree Hosting • DuckDNS Dynamic DNS • Netlify / Cloudflare</text>
-
-  <!-- 4 Platforms Grid -->
   <g filter="url(#shadow21)" transform="translate(40, 150)">
     <rect width="720" height="300" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.5"/>
-
-    <!-- Platform 1 -->
     <g transform="translate(20, 20)">
       <rect width="330" height="120" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
       <circle cx="35" cy="35" r="15" fill="#24292f"/>
@@ -34,8 +25,6 @@
       <rect x="20" y="92" width="70" height="18" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
       <text x="55" y="105" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">200 OK</text>
     </g>
-
-    <!-- Platform 2 -->
     <g transform="translate(370, 20)">
       <rect width="330" height="120" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.5"/>
       <circle cx="35" cy="35" r="15" fill="#f97316"/>
@@ -46,8 +35,6 @@
       <rect x="20" y="92" width="70" height="18" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
       <text x="55" y="105" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LIVE FTP</text>
     </g>
-
-    <!-- Platform 3 -->
     <g transform="translate(20, 160)">
       <rect width="330" height="120" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
       <circle cx="35" cy="35" r="15" fill="#10b981"/>
@@ -58,8 +45,6 @@
       <rect x="20" y="92" width="70" height="18" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
       <text x="55" y="105" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">ACTIVE</text>
     </g>
-
-    <!-- Platform 4 -->
     <g transform="translate(370, 160)">
       <rect width="330" height="120" rx="8" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
       <circle cx="35" cy="35" r="15" fill="#ec4899"/>

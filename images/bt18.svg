@@ -12,55 +12,37 @@
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
     </filter>
   </defs>
-
   <rect width="800" height="500" rx="16" fill="url(#bg18)"/>
-
-  <!-- Header Badge -->
   <rect x="40" y="30" width="150" height="32" rx="16" fill="rgba(249, 115, 22, 0.15)" stroke="#f97316" stroke-width="1.5"/>
   <text x="115" y="51" fill="#fb923c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BÀI TẬP 18 - FTP</text>
-
-  <!-- Title -->
   <text x="40" y="95" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">Upload Website qua FTP / FileZilla lên InfinityFree</text>
   <text x="40" y="125" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">Server: ftpupload.net:21 | User: if0_43511079 | Web: hoanganh-cv.42web.io</text>
-
-  <!-- Dual Panel Mockup (Local to Remote) -->
   <g filter="url(#shadow18)" transform="translate(40, 150)">
     <rect width="720" height="300" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
     <rect width="720" height="40" rx="12" fill="#1e293b"/>
     <rect x="0" y="30" width="720" height="10" fill="#1e293b"/>
-    
     <circle cx="24" cy="20" r="6" fill="#ef4444"/>
     <circle cx="44" cy="20" r="6" fill="#f59e0b"/>
     <circle cx="64" cy="20" r="6" fill="#10b981"/>
-    
     <text x="360" y="25" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">FTP Client — Transfer Status: 100% Completed (2 Files)</text>
-
-    <!-- Left side: Local Site -->
     <rect x="20" y="60" width="320" height="220" rx="8" fill="#111827" stroke="#1e293b"/>
     <rect x="20" y="60" width="320" height="32" rx="8" fill="#1f2937"/>
     <rect x="20" y="84" width="320" height="8" fill="#1f2937"/>
     <text x="35" y="81" fill="#60a5fa" font-family="sans-serif" font-size="12" font-weight="bold">💻 Local Site: /LapTrinhWeb/bt18</text>
-    
     <text x="35" y="120" fill="#cbd5e1" font-family="monospace" font-size="13">📄 index.html (CV cá nhân)</text>
     <text x="35" y="150" fill="#cbd5e1" font-family="monospace" font-size="13">🖼️ avatar.jpg (Nguyễn Hoàng Anh)</text>
     <text x="35" y="180" fill="#64748b" font-family="monospace" font-size="12">Size: 4.8 KB + 62.9 KB</text>
     <rect x="35" y="210" width="120" height="24" rx="4" fill="rgba(96, 165, 250, 0.2)"/>
     <text x="95" y="226" fill="#60a5fa" font-family="sans-serif" font-size="11" text-anchor="middle">Ready to Upload</text>
-
-    <!-- Center Arrow -->
     <circle cx="360" cy="170" r="18" fill="#f97316"/>
     <path d="M352 170 H368 M364 164 L370 170 L364 176" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- Right side: Remote Site -->
     <rect x="380" y="60" width="320" height="220" rx="8" fill="#111827" stroke="#1e293b"/>
     <rect x="380" y="60" width="320" height="32" rx="8" fill="#1f2937"/>
     <rect x="380" y="84" width="320" height="8" fill="#1f2937"/>
     <text x="395" y="81" fill="#4ade80" font-family="sans-serif" font-size="12" font-weight="bold">🌐 Remote Site: ftpupload.net/htdocs</text>
-
     <text x="395" y="120" fill="#4ade80" font-family="monospace" font-size="13">✓ index.html (Uploaded 100%)</text>
     <text x="395" y="150" fill="#4ade80" font-family="monospace" font-size="13">✓ avatar.jpg (Uploaded 100%)</text>
     <text x="395" y="180" fill="#94a3b8" font-family="sans-serif" font-size="12">Domain: hoanganh-cv.42web.io</text>
-
     <rect x="395" y="210" width="140" height="24" rx="4" fill="rgba(34, 197, 94, 0.2)"/>
     <text x="465" y="226" fill="#22c55e" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">STATUS: LIVE 200 OK</text>
   </g>

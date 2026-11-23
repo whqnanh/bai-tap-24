@@ -8,39 +8,25 @@
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
     </filter>
   </defs>
-
   <rect width="800" height="500" rx="16" fill="url(#bg22)"/>
-
-  <!-- Header Badge -->
   <rect x="40" y="30" width="200" height="32" rx="16" fill="rgba(14, 165, 233, 0.15)" stroke="#0ea5e9" stroke-width="1.5"/>
   <text x="140" y="51" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BÀI TẬP 22 - SSL/HTTPS</text>
-
-  <!-- Title -->
   <text x="40" y="95" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">Cấu Hình Bảo Mật SSL/HTTPS &amp; Custom Domain</text>
   <text x="40" y="125" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">Chứng chỉ TLS 1.3 • DigiCert / Cloudflare Free SSL • Enforce HTTPS Redirection</text>
-
-  <!-- SSL Certificate Window Mockup -->
   <g filter="url(#shadow22)" transform="translate(40, 150)">
     <rect width="720" height="300" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
     <rect width="720" height="42" rx="12" fill="#1e293b"/>
     <rect x="0" y="32" width="720" height="10" fill="#1e293b"/>
-
     <circle cx="24" cy="21" r="6" fill="#ef4444"/>
     <circle cx="44" cy="21" r="6" fill="#f59e0b"/>
     <circle cx="64" cy="21" r="6" fill="#10b981"/>
-    
     <text x="360" y="26" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Browser Security &amp; Certificate Viewer (TLS 1.3)</text>
-
-    <!-- Certificate details -->
     <g transform="translate(30, 65)">
-      <!-- Padlock icon and domain -->
       <rect width="660" height="55" rx="8" fill="#134e4a" stroke="#14b8a6"/>
       <circle cx="35" cy="28" r="16" fill="#0d9488"/>
-      <!-- Lock svg path -->
       <path d="M30 25 V21 A5 5 0 0 1 40 21 V25 M27 25 H43 V36 H27 Z" stroke="#fff" stroke-width="2" fill="none"/>
       <text x="65" y="28" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold">Connection is secure (HTTPS)</text>
       <text x="65" y="44" fill="#99f6e4" font-family="sans-serif" font-size="12">Valid certificate issued by GitHub / DigiCert Global Root G2</text>
-
       <g transform="translate(0, 75)">
         <rect width="320" height="140" rx="6" fill="#1e293b" stroke="#334155"/>
         <text x="15" y="25" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold">🔒 Chi Tiết Chứng Chỉ</text>
@@ -49,7 +35,6 @@
         <text x="15" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">Protocol: TLSv1.3 (RFC 8446)</text>
         <text x="15" y="110" fill="#cbd5e1" font-family="monospace" font-size="11">Cipher: TLS_AES_128_GCM_SHA256</text>
       </g>
-
       <g transform="translate(340, 75)">
         <rect width="320" height="140" rx="6" fill="#1e293b" stroke="#334155"/>
         <text x="15" y="25" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold">🌐 Cấu Hình Custom Domain</text>
