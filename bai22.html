@@ -18,11 +18,12 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #60a5fa;
+      color: #94a3b8;
       font-weight: 500;
       margin-bottom: 20px;
-      font-size: 13.5px;
+      font-size: 13px;
     }
+    .back-link:hover { color: #fff; }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -88,21 +89,20 @@
     <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span class="tag" style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 22</span>
-        <span class="status-indicator"><span class="status-dot"></span> Chứng chỉ TLS 1.3 bảo mật</span>
+      <div style="margin-bottom: 12px;">
+        <span class="tag">Bài tập 22</span>
       </div>
 
-      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Bảo Mật SSL/HTTPS &amp; Custom Domain</h1>
-      <p style="color: var(--text-muted); font-size: 14px;">
-        Cấu hình chứng chỉ TLS 1.3 DigiCert 256-bit, bật Enforce HTTPS chuyển hướng kết nối an toàn và định tuyến bản ghi CNAME cho tên miền riêng.
+      <h1 style="font-size: 22px; margin-bottom: 8px; color: #fff;">Bảo Mật SSL/HTTPS &amp; Custom Domain</h1>
+      <p style="color: var(--text-muted); font-size: 13.5px;">
+        Cấu hình chứng chỉ số TLS 1.3 DigiCert 256-bit, tính năng Enforce HTTPS và bản ghi CNAME cho Custom Domain.
       </p>
 
       <div class="media-box">
         <img src="images/bt22.svg" alt="Hình kết quả Bài tập 22 SSL">
       </div>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">1. Thông số chứng chỉ SSL/TLS</h3>
+      <h3 style="color: #fff; margin: 18px 0 8px; font-size: 15px;">Thông số chứng chỉ bảo mật</h3>
       <table class="table-custom">
         <thead>
           <tr>
@@ -113,38 +113,33 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Giao thức mã hóa</strong></td>
+            <td>Giao thức mã hóa</td>
             <td>TLSv1.3</td>
-            <td>Phiên bản giao thức bảo mật mới nhất</td>
+            <td>Giao thức bảo mật mạng an toàn</td>
           </tr>
           <tr>
-            <td><strong>Đơn vị cấp chứng chỉ (CA)</strong></td>
+            <td>Đơn vị cấp chứng chỉ</td>
             <td>DigiCert Inc / GitHub CA</td>
             <td>Tổ chức chứng thực số quốc tế</td>
           </tr>
           <tr>
-            <td><strong>Thuật toán mã hóa</strong></td>
+            <td>Thuật toán mã hóa</td>
             <td>RSA 2048-bit / SHA-256</td>
-            <td>Mã hóa dữ liệu truyền tải 256-bit</td>
+            <td>Mã hóa dữ liệu 256-bit</td>
           </tr>
           <tr>
-            <td><strong>Enforce HTTPS</strong></td>
+            <td>Enforce HTTPS</td>
             <td>Enabled</td>
-            <td>Tự động chuyển toàn bộ kết nối sang cổng 443 an toàn</td>
-          </tr>
-          <tr>
-            <td><strong>Custom Domain CNAME</strong></td>
-            <td>whqnanh.github.io</td>
-            <td>Định tuyến tên miền riêng vào hệ thống CDN</td>
+            <td>Tự động chuyển hướng kết nối an toàn</td>
           </tr>
         </tbody>
       </table>
 
-      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-primary">
           Kiểm tra chứng chỉ HTTPS
         </a>
-        <a href="den-keo-quan.html" class="btn btn-secondary">
+        <a href="den-keo-quan.html" class="btn">
           Sang Đèn Kéo Quân 3D &rarr;
         </a>
       </div>

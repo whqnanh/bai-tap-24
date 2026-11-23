@@ -18,11 +18,12 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #60a5fa;
+      color: #94a3b8;
       font-weight: 500;
       margin-bottom: 20px;
-      font-size: 13.5px;
+      font-size: 13px;
     }
+    .back-link:hover { color: #fff; }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -88,64 +89,53 @@
     <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span class="tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 19</span>
-        <span class="status-indicator"><span class="status-dot"></span> Đang hoạt động trên GitHub</span>
+      <div style="margin-bottom: 12px;">
+        <span class="tag">Bài tập 19</span>
       </div>
 
-      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Deploy Website Lên Nền Tảng GitHub Pages</h1>
-      <p style="color: var(--text-muted); font-size: 14px;">
-        Khởi tạo repository whqnanh/my-portfolio, quản lý mã nguồn qua Git, tự động hóa tiến trình deploy bằng GitHub Actions và xuất bản website chuẩn HTTPS.
+      <h1 style="font-size: 22px; margin-bottom: 8px; color: #fff;">Deploy Website Lên GitHub Pages</h1>
+      <p style="color: var(--text-muted); font-size: 13.5px;">
+        Hình ảnh kết quả triển khai website portfolio cá nhân lên GitHub Pages qua repository whqnanh/my-portfolio.
       </p>
 
       <div class="media-box">
-        <img src="images/bt19.svg" alt="Hình kết quả Bài tập 19 GitHub Pages">
+        <img src="images/result-bt19.jpg" alt="Kết quả Bài tập 19">
       </div>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">1. Thông số triển khai</h3>
+      <h3 style="color: #fff; margin: 18px 0 8px; font-size: 15px;">Thông số triển khai</h3>
       <table class="table-custom">
         <thead>
           <tr>
             <th>Hạng mục</th>
             <th>Chi tiết</th>
-            <th>Trạng thái</th>
+            <th>Ghi chú</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>GitHub Repository</strong></td>
-            <td><a href="https://github.com/whqnanh/my-portfolio" target="_blank" rel="noopener" style="color: #60a5fa;">whqnanh/my-portfolio</a></td>
-            <td>Public</td>
+            <td>Repository</td>
+            <td><a href="https://github.com/whqnanh/my-portfolio" target="_blank" rel="noopener" style="color: #38bdf8;">whqnanh/my-portfolio</a></td>
+            <td>Kho lưu trữ mã nguồn</td>
           </tr>
           <tr>
-            <td><strong>Nhánh phát hành</strong></td>
-            <td>main (thư mục gốc /)</td>
-            <td>Active</td>
+            <td>Nhánh phát hành</td>
+            <td>main</td>
+            <td>Triển khai từ thư mục gốc</td>
           </tr>
           <tr>
-            <td><strong>Hạ tầng phân phối</strong></td>
-            <td>GitHub Pages Fastly CDN</td>
-            <td>Hoạt động ổn định</td>
-          </tr>
-          <tr>
-            <td><strong>Chứng chỉ bảo mật</strong></td>
-            <td>DigiCert TLS 1.3</td>
-            <td>HTTPS Enforced</td>
-          </tr>
-          <tr>
-            <td><strong>Website live</strong></td>
-            <td><a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" style="color: #4ade80;">whqnanh.github.io/my-portfolio</a></td>
-            <td>HTTP 200 OK</td>
+            <td>Website trực tuyến</td>
+            <td><a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" style="color: #38bdf8;">whqnanh.github.io/my-portfolio</a></td>
+            <td>GitHub Pages live</td>
           </tr>
         </tbody>
       </table>
 
-      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-primary">
           Mở website GitHub Pages
         </a>
-        <a href="bai20.html" class="btn btn-secondary">
-          Sang Bài 20: Tối ưu SEO &rarr;
+        <a href="bai20.html" class="btn">
+          Sang Bài 20 &rarr;
         </a>
       </div>
     </div>

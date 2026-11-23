@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài tập 21: 4 Nền Tảng - MSSV: 241A010633</title>
+  <title>Bài tập 21: Public Nền Tảng - MSSV: 241A010633</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     .detail-container { max-width: 860px; margin: 30px auto 60px; }
@@ -18,11 +18,12 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #60a5fa;
+      color: #94a3b8;
       font-weight: 500;
       margin-bottom: 20px;
-      font-size: 13.5px;
+      font-size: 13px;
     }
+    .back-link:hover { color: #fff; }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -88,69 +89,53 @@
     <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span class="tag" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 21</span>
-        <span class="status-indicator"><span class="status-dot"></span> 4 Nền tảng đang hoạt động (Live 100%)</span>
+      <div style="margin-bottom: 12px;">
+        <span class="tag">Bài tập 21</span>
       </div>
 
-      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Xuất Bản Website Trên 4 Nền Tảng Miễn Phí</h1>
-      <p style="color: var(--text-muted); font-size: 14px;">
-        Nghiệm thu triển khai website trên 4 hạ tầng máy chủ và tên miền miễn phí: GitHub Pages, InfinityFree Web Hosting, DuckDNS Dynamic Domain, và Netlify/Vercel.
+      <h1 style="font-size: 22px; margin-bottom: 8px; color: #fff;">Public Website Trên Các Nền Tảng Miễn Phí</h1>
+      <p style="color: var(--text-muted); font-size: 13.5px;">
+        Hình ảnh nghiệm thu xuất bản website cá nhân lên môi trường Internet công cộng qua Safari.
       </p>
 
       <div class="media-box">
-        <img src="images/bt21.svg" alt="Hình kết quả Bài tập 21 4 Nền Tảng">
+        <img src="images/result-bt21.jpg" alt="Kết quả Bài tập 21">
       </div>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">Bảng tổng hợp 4 nền tảng</h3>
+      <h3 style="color: #fff; margin: 18px 0 8px; font-size: 15px;">Thông tin triển khai</h3>
       <table class="table-custom">
         <thead>
           <tr>
-            <th>STT</th>
             <th>Nền tảng</th>
             <th>Loại hình</th>
-            <th>Trạng thái</th>
-            <th>Địa chỉ truy cập (Live URL)</th>
+            <th>Địa chỉ truy cập</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>01</td>
-            <td><strong>GitHub Pages</strong></td>
-            <td>Fastly CDN Jamstack</td>
-            <td>200 OK</td>
-            <td><a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" style="color: #60a5fa;">whqnanh.github.io/my-portfolio</a></td>
+            <td>GitHub Pages</td>
+            <td>Static CDN Hosting</td>
+            <td><a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" style="color: #38bdf8;">whqnanh.github.io/my-portfolio</a></td>
           </tr>
           <tr>
-            <td>02</td>
-            <td><strong>InfinityFree</strong></td>
-            <td>Linux Server / FTP</td>
-            <td>Live FTP</td>
-            <td><a href="http://hoanganh-cv.42web.io/my-portfolio/" target="_blank" rel="noopener" style="color: #60a5fa;">hoanganh-cv.42web.io/my-portfolio</a></td>
+            <td>InfinityFree</td>
+            <td>Web Hosting FTP</td>
+            <td><a href="http://hoanganh-cv.42web.io/my-portfolio/" target="_blank" rel="noopener" style="color: #38bdf8;">hoanganh-cv.42web.io/my-portfolio</a></td>
           </tr>
           <tr>
-            <td>03</td>
-            <td><strong>DuckDNS</strong></td>
-            <td>Anycast DNS Record A</td>
-            <td>Active</td>
-            <td><a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" style="color: #60a5fa;">mywebsite-hoanganh.duckdns.org</a></td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td><strong>GitHub E-Commerce</strong></td>
-            <td>Production Static App</td>
-            <td>200 OK</td>
-            <td><a href="https://whqnanh.github.io/bai-tap-32/" target="_blank" rel="noopener" style="color: #60a5fa;">whqnanh.github.io/bai-tap-32</a></td>
+            <td>DuckDNS</td>
+            <td>DNS Record A</td>
+            <td><a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" style="color: #38bdf8;">mywebsite-hoanganh.duckdns.org</a></td>
           </tr>
         </tbody>
       </table>
 
-      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-primary">
-          Mở portfolio GitHub Pages
+          Mở website live
         </a>
-        <a href="bai22.html" class="btn btn-secondary">
-          Sang Bài 22: SSL/HTTPS &rarr;
+        <a href="bai22.html" class="btn">
+          Sang Bài 22 &rarr;
         </a>
       </div>
     </div>

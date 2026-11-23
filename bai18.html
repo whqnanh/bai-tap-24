@@ -18,11 +18,12 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #60a5fa;
+      color: #94a3b8;
       font-weight: 500;
       margin-bottom: 20px;
-      font-size: 13.5px;
+      font-size: 13px;
     }
+    .back-link:hover { color: #fff; }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -88,69 +89,58 @@
     <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span class="tag" style="background: rgba(249, 115, 22, 0.15); color: #fb923c; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 18</span>
-        <span class="status-indicator"><span class="status-dot"></span> Đã deploy lên hosting</span>
+      <div style="margin-bottom: 12px;">
+        <span class="tag">Bài tập 18</span>
       </div>
 
-      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Upload Website CV Qua Giao Thức FTP/SFTP</h1>
-      <p style="color: var(--text-muted); font-size: 14px;">
-        Kết nối FTP cổng 21 tới máy chủ InfinityFree, định vị thư mục web gốc /htdocs và upload trang CV cá nhân kèm ảnh đại diện.
+      <h1 style="font-size: 22px; margin-bottom: 8px; color: #fff;">Upload Website CV Qua Giao Thức FTP</h1>
+      <p style="color: var(--text-muted); font-size: 13.5px;">
+        Hình ảnh kết quả kết nối FTP máy chủ ftpupload.net:21 và upload website CV cá nhân lên thư mục /htdocs của InfinityFree.
       </p>
 
       <div class="media-box">
-        <img src="images/bt18.svg" alt="Hình kết quả Bài tập 18 FTP">
+        <img src="images/result-bt18.jpg" alt="Kết quả Bài tập 18">
       </div>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">1. Thông số kết nối FTP</h3>
+      <h3 style="color: #fff; margin: 18px 0 8px; font-size: 15px;">Thông số kết nối</h3>
       <table class="table-custom">
         <thead>
           <tr>
             <th>Thông số</th>
             <th>Giá trị thực tế</th>
-            <th>Mô tả</th>
+            <th>Ghi chú</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>FTP Host / Server</strong></td>
-            <td><code>ftpupload.net</code></td>
-            <td>Máy chủ FTP của InfinityFree</td>
+            <td>FTP Host / Port</td>
+            <td>ftpupload.net : 21</td>
+            <td>InfinityFree FTP server</td>
           </tr>
           <tr>
-            <td><strong>FTP Username</strong></td>
-            <td><code>if0_43511079</code></td>
-            <td>Tài khoản định danh FTP</td>
+            <td>FTP Username</td>
+            <td>if0_43511079</td>
+            <td>Tài khoản FTP</td>
           </tr>
           <tr>
-            <td><strong>FTP Port</strong></td>
-            <td>21</td>
-            <td>Cổng truyền dữ liệu FTP tiêu chuẩn</td>
+            <td>Thư mục web gốc</td>
+            <td>/htdocs</td>
+            <td>Thư mục chứa source code</td>
           </tr>
           <tr>
-            <td><strong>Thư mục đích</strong></td>
-            <td><code>/htdocs</code></td>
-            <td>Thư mục web gốc chứa file công khai</td>
-          </tr>
-          <tr>
-            <td><strong>Tệp tin tải lên</strong></td>
-            <td><code>index.html</code>, <code>avatar.jpg</code></td>
-            <td>Đã hoàn thành upload 100%</td>
-          </tr>
-          <tr>
-            <td><strong>Địa chỉ website live</strong></td>
-            <td><a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" style="color: #60a5fa;">http://hoanganh-cv.42web.io</a></td>
-            <td>Trang CV cá nhân hoạt động trực tiếp</td>
+            <td>Địa chỉ website live</td>
+            <td><a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" style="color: #38bdf8;">http://hoanganh-cv.42web.io</a></td>
+            <td>Trang web CV cá nhân online</td>
           </tr>
         </tbody>
       </table>
 
-      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" class="btn btn-primary">
           Mở website CV live
         </a>
-        <a href="bai19.html" class="btn btn-secondary">
-          Sang Bài 19: GitHub Pages &rarr;
+        <a href="bai19.html" class="btn">
+          Sang Bài 19 &rarr;
         </a>
       </div>
     </div>

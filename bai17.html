@@ -18,11 +18,12 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: #60a5fa;
+      color: #94a3b8;
       font-weight: 500;
       margin-bottom: 20px;
-      font-size: 13.5px;
+      font-size: 13px;
     }
+    .back-link:hover { color: #fff; }
     .media-box {
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -44,18 +45,6 @@
     .table-custom th {
       background: rgba(255, 255, 255, 0.04);
       color: #f8fafc;
-    }
-    .code-snippet {
-      background: #090d16;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 14px;
-      font-family: monospace;
-      font-size: 13px;
-      color: #38bdf8;
-      overflow-x: auto;
-      margin: 14px 0;
-      line-height: 1.5;
     }
   </style>
 </head>
@@ -100,69 +89,53 @@
     <a href="index.html" class="back-link">&larr; Quay lại Trang chủ Bài tập 24</a>
 
     <div class="report-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span class="tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: 600; padding: 4px 10px;">Báo cáo thực hành Bài 17</span>
-        <span class="status-indicator"><span class="status-dot"></span> Đã xác minh DNS (200 OK)</span>
+      <div style="margin-bottom: 12px;">
+        <span class="tag">Bài tập 17</span>
       </div>
 
-      <h1 style="font-size: 24px; margin-bottom: 10px; color: #fff;">Đăng Ký Domain &amp; Kiểm Tra Bản Ghi DNS</h1>
-      <p style="color: var(--text-muted); font-size: 14px;">
-        Đăng ký tên miền DuckDNS, cấu hình bản ghi Record A trỏ về IP máy chủ và kiểm thử phân giải DNS bằng lệnh nslookup trên macOS.
+      <h1 style="font-size: 22px; margin-bottom: 8px; color: #fff;">Đăng Ký Domain &amp; Kiểm Tra Bản Ghi DNS</h1>
+      <p style="color: var(--text-muted); font-size: 13.5px;">
+        Hình ảnh kết quả đăng ký tên miền mywebsite-hoanganh.duckdns.org trỏ IP 113.185.75.163 và kiểm tra phân giải DNS bằng nslookup trên Terminal.
       </p>
 
       <div class="media-box">
-        <img src="images/bt17.svg" alt="Hình kết quả Bài tập 17 DNS">
+        <img src="images/result-bt17.jpg" alt="Kết quả Bài tập 17">
       </div>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">1. Thông số kỹ thuật đã thiết lập</h3>
+      <h3 style="color: #fff; margin: 18px 0 8px; font-size: 15px;">Thông số kỹ thuật</h3>
       <table class="table-custom">
         <thead>
           <tr>
             <th>Thông số</th>
             <th>Giá trị thực tế</th>
-            <th>Ý nghĩa</th>
+            <th>Ghi chú</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Tên miền đã cấp (Domain)</strong></td>
-            <td><code>mywebsite-hoanganh.duckdns.org</code></td>
-            <td>Subdomain hoạt động trên máy chủ DNS toàn cầu</td>
+            <td>Tên miền (Domain)</td>
+            <td>mywebsite-hoanganh.duckdns.org</td>
+            <td>DuckDNS free dynamic domain</td>
           </tr>
           <tr>
-            <td><strong>Loại bản ghi DNS</strong></td>
-            <td>Record A (Address)</td>
-            <td>Ánh xạ tên miền sang địa chỉ IPv4</td>
+            <td>Loại bản ghi</td>
+            <td>Record A</td>
+            <td>Trỏ về IP 113.185.75.163</td>
           </tr>
           <tr>
-            <td><strong>IP đích trỏ đến</strong></td>
-            <td><code>113.185.75.163</code></td>
-            <td>Địa chỉ IP công cộng của web server</td>
-          </tr>
-          <tr>
-            <td><strong>DNS Server kiểm tra</strong></td>
-            <td>Google Public DNS (8.8.8.8)</td>
-            <td>Máy chủ DNS chuẩn cổng 53 để kiểm thử toàn cầu</td>
+            <td>Lệnh kiểm tra</td>
+            <td>nslookup mywebsite-hoanganh.duckdns.org 8.8.8.8</td>
+            <td>Phân giải chính xác qua DNS Google</td>
           </tr>
         </tbody>
       </table>
 
-      <h3 style="color: #fff; margin: 20px 0 8px; font-size: 16px;">2. Lệnh kiểm tra phân giải DNS</h3>
-      <div class="code-snippet">
-$ nslookup mywebsite-hoanganh.duckdns.org 8.8.8.8<br><br>
-Server:        8.8.8.8<br>
-Address:       8.8.8.8#53<br><br>
-Non-authoritative answer:<br>
-Name:    mywebsite-hoanganh.duckdns.org<br>
-Address: 113.185.75.163
-      </div>
-
-      <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
         <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" class="btn btn-primary">
-          Mở tên miền thử nghiệm
+          Mở link domain
         </a>
-        <a href="bai18.html" class="btn btn-secondary">
-          Sang Bài 18: Upload FTP &rarr;
+        <a href="bai18.html" class="btn">
+          Sang Bài 18 &rarr;
         </a>
       </div>
     </div>

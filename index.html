@@ -43,7 +43,7 @@
         <li class="nav-item"><a href="bai20.html">Bài 20</a></li>
         <li class="nav-item"><a href="bai21.html">Bài 21</a></li>
         <li class="nav-item"><a href="bai22.html">Bài 22</a></li>
-        <li class="nav-item highlight"><a href="den-keo-quan.html">Đèn Kéo Quân</a></li>
+        <li class="nav-item"><a href="den-keo-quan.html">Đèn Kéo Quân</a></li>
       </ul>
     </div>
   </nav>
@@ -63,8 +63,8 @@
 
       <div class="hero-cta-group">
         <a href="#den-keo-quan-section" class="btn btn-primary">Xem Đèn Kéo Quân</a>
-        <a href="#projects-section" class="btn btn-secondary">Danh sách Bài tập 17 - 22</a>
-        <a href="den-keo-quan.html" class="btn btn-secondary">Mở trang Đèn toàn màn hình</a>
+        <a href="#projects-section" class="btn">Danh sách Bài tập 17 - 22</a>
+        <a href="den-keo-quan.html" class="btn">Mở trang Đèn toàn màn hình</a>
       </div>
 
       <div class="stats-bar">
@@ -94,22 +94,11 @@
         <span class="section-tag">Hiệu ứng JavaScript</span>
         <h2 class="section-title">Đèn Kéo Quân 3D</h2>
         <p class="section-desc">
-          Hiển thị 6 hình ảnh trên 6 mặt đèn kéo quân xoay vòng tròn quanh trục Y. Rê chuột vào hình thì đèn dừng lại, rê chuột ra thì đèn quay tiếp.
+          Hiển thị 6 hình ảnh trên 6 mặt đèn kéo quân xoay vòng tròn.
         </p>
       </div>
 
       <div class="lantern-scene">
-        <div class="lantern-status-badge">
-          <span class="status-pulse-dot" id="statusDot"></span>
-          <span id="lanternStatusText">Đang quay</span>
-          <span style="opacity: 0.4;">|</span>
-          <span>Góc xoay: <strong id="angleDisplay" style="color: #38bdf8;">0°</strong></span>
-        </div>
-
-        <div class="lantern-hint">
-          Rê chuột vào hình để dừng - Rê chuột ra để quay tiếp
-        </div>
-
         <div class="lantern-stage">
           <div class="lantern-carousel" id="lanternCarousel">
             
@@ -194,7 +183,7 @@
           <div class="speed-control">
             <span>Tốc độ:</span>
             <input type="range" id="speedSlider" min="0.2" max="3.0" step="0.2" value="1.0">
-            <span id="speedVal" style="color: #38bdf8; font-weight: 600;">1.0x</span>
+            <span id="speedVal">1.0x</span>
           </div>
           <a href="den-keo-quan.html" class="control-btn">Mở trang riêng</a>
         </div>
@@ -208,7 +197,7 @@
         <span class="section-tag">Tổng hợp</span>
         <h2 class="section-title">Kết Quả Các Bài Tập Thực Hành</h2>
         <p class="section-desc">
-          Danh sách kết quả các bài tập từ 17 đến 22 kèm hình ảnh nghiệm thu và liên kết tới từng trang nhánh.
+          Danh sách kết quả các bài tập từ 17 đến 22 kèm hình ảnh chụp thực tế và liên kết tới từng trang nhánh.
         </p>
       </div>
 
@@ -216,16 +205,15 @@
 
         <div class="project-card">
           <div class="card-media">
-            <img src="images/bt17.svg" alt="Bài tập 17">
+            <img src="images/result-bt17.jpg" alt="Bài tập 17">
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 17</span>
-              <span class="status-indicator"><span class="status-dot"></span> Đã xác minh</span>
             </div>
             <h3 class="card-title">Đăng Ký Domain &amp; Cấu Hình DNS</h3>
             <p class="card-desc">
-              Đăng ký tên miền DuckDNS, cấu hình bản ghi A trỏ IP 113.185.75.163 và kiểm tra phân giải qua nslookup.
+              Đăng ký tên miền DuckDNS mywebsite-hoanganh.duckdns.org trỏ IP 113.185.75.163 và kiểm tra phân giải qua nslookup.
             </p>
             <div class="card-tags">
               <span class="tag">DuckDNS</span>
@@ -233,20 +221,19 @@
               <span class="tag">nslookup</span>
             </div>
             <div class="card-footer">
-              <a href="bai17.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" class="btn btn-secondary">Mở link live</a>
+              <a href="bai17.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" rel="noopener" class="btn">Mở link live</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="card-media">
-            <img src="images/bt18.svg" alt="Bài tập 18">
+            <img src="images/result-bt18.jpg" alt="Bài tập 18">
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 18</span>
-              <span class="status-indicator"><span class="status-dot"></span> Đã upload</span>
             </div>
             <h3 class="card-title">Upload Website Qua Giao Thức FTP</h3>
             <p class="card-desc">
@@ -258,20 +245,19 @@
               <span class="tag">CV cá nhân</span>
             </div>
             <div class="card-footer">
-              <a href="bai18.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" class="btn btn-secondary">Mở web CV</a>
+              <a href="bai18.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="http://hoanganh-cv.42web.io" target="_blank" rel="noopener" class="btn">Mở web CV</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="card-media">
-            <img src="images/bt19.svg" alt="Bài tập 19">
+            <img src="images/result-bt19.jpg" alt="Bài tập 19">
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 19</span>
-              <span class="status-indicator"><span class="status-dot"></span> Đang hoạt động</span>
             </div>
             <h3 class="card-title">Deploy Website Lên GitHub Pages</h3>
             <p class="card-desc">
@@ -283,59 +269,56 @@
               <span class="tag">HTTPS</span>
             </div>
             <div class="card-footer">
-              <a href="bai19.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Mở link live</a>
+              <a href="bai19.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn">Mở link live</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="card-media">
-            <img src="images/bt20.svg" alt="Bài tập 20">
+            <img src="images/result-bt20a.jpg" alt="Bài tập 20">
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 20</span>
-              <span class="status-indicator"><span class="status-dot"></span> Chuẩn SEO</span>
             </div>
-            <h3 class="card-title">Tối Ưu Hóa SEO &amp; Thẻ Open Graph</h3>
+            <h3 class="card-title">Trắc Nghiệm Chương 1 &amp; Chương 2</h3>
             <p class="card-desc">
-              Thiết lập cấu trúc thẻ meta tiêu chuẩn, Open Graph cho mạng xã hội, Twitter Cards, robots.txt và sitemap.xml.
+              Kết quả làm bài trắc nghiệm trực tuyến 20a (Chương 1) và 20b (Chương 2) đạt điểm tuyệt đối 10.00 / 10.
             </p>
             <div class="card-tags">
-              <span class="tag">Meta Tags</span>
-              <span class="tag">Open Graph</span>
-              <span class="tag">Lighthouse 100</span>
+              <span class="tag">Bài 20a</span>
+              <span class="tag">Bài 20b</span>
+              <span class="tag">Điểm 10/10</span>
             </div>
             <div class="card-footer">
-              <a href="bai20.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Xem áp dụng</a>
+              <a href="bai20.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="bai20.html" class="btn">Xem điểm cả 2 bài</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="card-media">
-            <img src="images/bt21.svg" alt="Bài tập 21">
+            <img src="images/result-bt21.jpg" alt="Bài tập 21">
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 21</span>
-              <span class="status-indicator"><span class="status-dot"></span> 4 Link Live</span>
             </div>
-            <h3 class="card-title">Public Website Trên 4 Nền Tảng</h3>
+            <h3 class="card-title">Public Website Trên Các Nền Tảng</h3>
             <p class="card-desc">
-              Báo cáo tổng hợp nghiệm thu 4 nền tảng: GitHub Pages, InfinityFree Web Hosting, DuckDNS và Netlify/Vercel.
+              Nghiệm thu triển khai website cá nhân lên môi trường Internet công cộng qua Safari và các nền tảng miễn phí.
             </p>
             <div class="card-tags">
               <span class="tag">GitHub Pages</span>
               <span class="tag">InfinityFree</span>
               <span class="tag">DuckDNS</span>
-              <span class="tag">Netlify</span>
             </div>
             <div class="card-footer">
-              <a href="bai21.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="bai21.html" class="btn btn-secondary">Bảng so sánh</a>
+              <a href="bai21.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn">Mở link live</a>
             </div>
           </div>
         </div>
@@ -347,7 +330,6 @@
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài tập 22</span>
-              <span class="status-indicator"><span class="status-dot"></span> Đã mã hóa</span>
             </div>
             <h3 class="card-title">Bảo Mật SSL/HTTPS &amp; Custom Domain</h3>
             <p class="card-desc">
@@ -359,8 +341,8 @@
               <span class="tag">Custom Domain</span>
             </div>
             <div class="card-footer">
-              <a href="bai22.html" class="btn btn-primary">Xem trang nhánh</a>
-              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn btn-secondary">Kiểm tra SSL</a>
+              <a href="bai22.html" class="btn btn-primary">Xem chi tiết</a>
+              <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" rel="noopener" class="btn">Kiểm tra SSL</a>
             </div>
           </div>
         </div>
@@ -372,7 +354,6 @@
           <div class="card-body">
             <div class="card-meta">
               <span class="card-number">Bài Đèn kéo quân</span>
-              <span class="status-indicator"><span class="status-dot"></span> Hoàn thành</span>
             </div>
             <h3 class="card-title">Đèn Kéo Quân 3D Javascript</h3>
             <p class="card-desc">
@@ -384,8 +365,8 @@
               <span class="tag">Rời chuột quay</span>
             </div>
             <div class="card-footer">
-              <a href="den-keo-quan.html" class="btn btn-primary">Mở trang đèn 3D</a>
-              <a href="#den-keo-quan-section" class="btn btn-secondary">Xem tại đây</a>
+              <a href="den-keo-quan.html" class="btn btn-primary">Mở trang riêng</a>
+              <a href="#den-keo-quan-section" class="btn">Xem tại đây</a>
             </div>
           </div>
         </div>

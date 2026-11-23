@@ -24,8 +24,8 @@
 - Bài 17: Đăng ký Domain & Cấu hình DNS (bai17.html)
 - Bài 18: Upload Website qua FTP/SFTP (bai18.html)
 - Bài 19: Deploy lên GitHub Pages & CI/CD (bai19.html)
-- Bài 20: Tối ưu hóa SEO & Thẻ Open Graph (bai20.html)
-- Bài 21: Public trên 4 Nền tảng miễn phí (bai21.html)
+- Bài 20: Trắc nghiệm trực tuyến Chương 1 (20a) & Chương 2 (20b) (bai20.html)
+- Bài 21: Public trên các Nền tảng miễn phí (bai21.html)
 - Bài 22: Cấu hình SSL/HTTPS & Custom Domain (bai22.html)
 - Bài Đèn kéo quân: Đèn Kéo Quân 3D Javascript (den-keo-quan.html)
 
